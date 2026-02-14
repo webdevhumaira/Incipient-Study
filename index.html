@@ -1,0 +1,3242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incipient Study - Master Languages & Programming</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #113449;
+            --secondary-color: #FF6B35;
+            --accent-color: #00d2d2;
+            --dark-color: #1A1F2E;
+            --light-gray: #F8F9FA;
+            --border-color: #E8ECF1;
+            --success-color: #2ECC71;
+            --text-dark: #2C3E50;
+            --text-muted: #6C757D;
+            --bg-body: #ffffff;
+            --card-bg: #ffffff;
+            --footer-bg: var(--dark-color);
+            --cursor-ring: var(--primary-color);
+            --cursor-dot: var(--secondary-color);
+        }
+
+        /* Dark theme variables */
+        [data-theme="dark"] {
+            --primary-color: #1E6F9F;
+            --secondary-color: #FF6B35;
+            --accent-color: #00d2d2;
+            --dark-color: #0B0F17;
+            --light-gray: #232837;
+            --border-color: #2D3344;
+            --text-dark: #E9ECEF;
+            --text-muted: #ADB5BD;
+            --bg-body: #181C2A;
+            --card-bg: #232837;
+            --footer-bg: #0B0F17;
+            --cursor-ring: #FF8A5C;
+            --cursor-dot: #00d2d2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--bg-body);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        /* ----- WebKit Scrollbar coloring ----- */
+        ::-webkit-scrollbar {
+            width: 12px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--light-gray);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary-color);
+            border-radius: 10px;
+            border: 2px solid var(--light-gray);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary-color);
+        }
+
+        /* ----- Custom cursor (dot + ring) ----- */
+        .custom-cursor {
+            position: fixed;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+        }
+
+        .cursor-ring {
+            width: 32px;
+            height: 32px;
+            border: 2px solid var(--cursor-ring);
+            border-radius: 50%;
+            transition: all 0.1s ease;
+        }
+
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--cursor-dot);
+            border-radius: 50%;
+            position: fixed;
+            transition: transform 0.1s ease;
+        }
+
+        /* ----- Scroll progress bar ----- */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            z-index: 99999;
+            border-radius: 0 2px 2px 0;
+            box-shadow: 0 0 8px var(--accent-color);
+            transition: width 0.1s ease;
+        }
+
+        /* ----- Floating WhatsApp button ----- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            z-index: 9998;
+            transition: all 0.3s ease;
+            animation: pulse-whatsapp 2s infinite;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.15) rotate(5deg);
+            background: #20b859;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.7);
+        }
+
+        @keyframes pulse-whatsapp {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* ----- Scroll to top button ----- */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0);
+            transition: all 0.3s ease;
+            z-index: 9997;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .scroll-top-btn.show {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+
+        .scroll-top-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ----- Theme toggle dropdown ----- */
+        .theme-dropdown .btn {
+            background: var(--light-gray);
+            border: none;
+            color: var(--text-dark);
+            border-radius: 10px;
+            padding: 0.6rem 1rem;
+            font-weight: 500;
+        }
+
+        .theme-dropdown .dropdown-menu {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+        }
+
+        .theme-dropdown .dropdown-item {
+            color: var(--text-dark);
+        }
+
+        .theme-dropdown .dropdown-item:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* ===== HEADER / NAVIGATION ===== */
+        .main-header {
+            background: #ffffff;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+            padding: 0;
+            transition: all 0.3s ease;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .main-header.scrolled {
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+        }
+
+        .nav-link {
+            color: var(--text-dark);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            margin: 0 0.2rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 60%;
+        }
+
+        .btn-login {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 0.6rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background: transparent;
+        }
+
+        .btn-login:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .btn-signup {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-signup:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(15, 76, 129, 0.3);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero-section {
+            background: linear-gradient(135deg, #F8FBFF 0%, #EBF4FA 100%);
+            padding: 80px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 180, 216, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-section img {
+            width: 500px;
+            max-width: 100%;
+            border-radius: 50px;
+            justify-content: flex-end;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-title .highlight {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(15, 76, 129, 0.3);
+        }
+
+        .btn-secondary-custom {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 1rem 2.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary-custom:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .hero-illustration {
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-illustration img {
+            width: 500px;
+            max-width: 100%;
+            border-radius: 50px;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .hero-image-placeholder {
+            max-width: 100%;
+            background: linear-gradient(135deg, rgba(15, 76, 129, 0.1), rgba(0, 180, 216, 0.1));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--accent-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
+        }
+
+        /* ===== FEATURED COURSES CAROUSEL ===== */
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .courses-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            margin: 0 10px;
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .course-thumbnail {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .course-thumbnail::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .course-content {
+            padding: 1.5rem;
+        }
+
+        .course-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .course-meta i {
+            color: var(--secondary-color);
+        }
+
+        .course-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .course-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .btn-enroll {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-enroll:hover {
+            background: #E55A2A;
+            transform: scale(1.05);
+        }
+
+        /* ===== COURSE CATEGORIES ===== */
+        .categories-section {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 2px solid transparent;
+        }
+
+        .category-card:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .category-card:hover .category-icon {
+            transform: rotate(5deg) scale(1.1);
+        }
+
+        .category-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--dark-color);
+        }
+
+        .category-description {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .btn-view-courses {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            padding: 0.6rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-view-courses:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* ===== STATISTICS SECTION ===== */
+        .stats-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            opacity: 0.3;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== HOW IT WORKS SECTION ===== */
+        .how-it-works-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .step-card {
+            text-align: center;
+            position: relative;
+            padding: 2rem 1rem;
+        }
+
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            font-weight: 800;
+            color: white;
+            box-shadow: 0 8px 25px rgba(15, 76, 129, 0.3);
+        }
+
+        .step-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+
+        .step-description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .step-connector {
+            position: absolute;
+            top: 35px;
+            left: 60%;
+            width: 80%;
+            height: 2px;
+            background: var(--border-color);
+            z-index: -1;
+        }
+
+        .step-card:last-child .step-connector {
+            display: none;
+        }
+
+        /* ===== FEATURES SECTION ===== */
+        .features-section {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+
+        .feature-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, rgba(15, 76, 129, 0.1), rgba(0, 180, 216, 0.1));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--dark-color);
+        }
+
+        .feature-description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            font-size: 3rem;
+            color: var(--accent-color);
+            opacity: 0.2;
+        }
+
+        .testimonial-content {
+            margin-bottom: 2rem;
+            font-style: italic;
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        .author-info h5 {
+            margin-bottom: 0.3rem;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        .author-info p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .testimonial-rating {
+            color: var(--secondary-color);
+            margin-top: 0.5rem;
+        }
+
+        /* ===== CTA BANNER ===== */
+        .cta-banner {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .btn-cta {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 1.2rem 3rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            background: #E55A2A;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 107, 53, 0.4);
+        }
+
+        /* ===== NEWSLETTER SECTION ===== */
+        .newsletter-section {
+            padding: 80px 0;
+            background: var(--light-gray);
+        }
+
+        .newsletter-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .newsletter-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+
+        .newsletter-description {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .btn-subscribe {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .btn-subscribe:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(15, 76, 129, 0.3);
+        }
+
+        /* ----- New sections styling ----- */
+        .about-section,
+        .instructors-section,
+        .contact-section {
+            padding: 80px 0;
+        }
+
+        .instructor-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            margin: 0 10px;
+            border: 1px solid var(--border-color);
+        }
+
+        .instructor-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .instructor-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            font-weight: 700;
+        }
+
+        /* ----- Enhanced Contact Section ----- */
+        .contact-section {
+            background: linear-gradient(135deg, var(--light-gray) 0%, #ffffff 100%);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 210, 210, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+
+        .contact-card,
+        .contact-info-card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(2px);
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-card:hover,
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 50px -10px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 1rem;
+        }
+
+        .contact-card-header i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            background: rgba(0, 210, 210, 0.1);
+            padding: 0.8rem;
+            border-radius: 16px;
+        }
+
+        .contact-card-header h4 {
+            margin: 0;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        .contact-form .form-label {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-form .input-group-text {
+            background: var(--light-gray);
+            border: 2px solid var(--border-color);
+            border-right: none;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            border-radius: 14px 0 0 14px;
+        }
+
+        .contact-form .form-control {
+            background: var(--light-gray);
+            border: 2px solid var(--border-color);
+            border-left: none;
+            padding: 0.7rem 1rem;
+            font-size: 1rem;
+            color: var(--text-dark);
+            border-radius: 0 14px 14px 0;
+        }
+
+        .contact-form .form-control:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(0, 210, 210, 0.2);
+            outline: none;
+            background: var(--card-bg);
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(15, 76, 129, 0.3);
+        }
+
+        .contact-info-card {
+            background: linear-gradient(145deg, var(--card-bg), var(--light-gray));
+        }
+
+        .contact-details {
+            margin: 2rem 0;
+        }
+
+        .detail-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+
+        .detail-item .icon-box {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            box-shadow: 0 8px 18px rgba(15, 76, 129, 0.2);
+        }
+
+        .detail-item h5 {
+            margin: 0 0 0.2rem;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+
+        .detail-item p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .detail-item a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .detail-item a:hover {
+            color: var(--primary-color);
+        }
+
+        .social-links-circle {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-circle {
+            width: 45px;
+            height: 45px;
+            background: var(--light-gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+        }
+
+        .social-circle:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .map-decoration {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            font-size: 6rem;
+            color: var(--accent-color);
+            opacity: 0.07;
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+
+            .contact-card,
+            .contact-info-card {
+                padding: 1.5rem;
+            }
+        }
+
+        /* ----- Animation classes for text/icons ----- */
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .fade-out {
+            animation: fadeOut 1s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+
+        .zoom-in {
+            animation: zoomIn 0.5s ease forwards;
+        }
+
+        .zoom-out {
+            animation: zoomOut 0.5s ease forwards;
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomOut {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        /* ===== NEW SECTIONS (Roadmap, Batches, Certificate, Platform Features, FAQ, Blog) ===== */
+        .roadmap-section,
+        .batches-section,
+        .certificate-section,
+        .platform-features-section,
+        .faq-section,
+        .blog-section {
+            padding: 80px 0;
+        }
+
+        .batches-section {
+            background: var(--light-gray);
+        }
+
+        .platform-features-section {
+            background: var(--light-gray);
+        }
+
+        .faq-section {
+            background: white;
+        }
+
+        .blog-section {
+            background: var(--light-gray);
+        }
+
+        /* roadmap cards */
+        .roadmap-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            height: 100%;
+            border-left: 5px solid var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .roadmap-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .roadmap-card .level {
+            color: var(--accent-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .roadmap-card h4 {
+            margin: 1rem 0 0.5rem;
+        }
+
+        /* batch cards */
+        .batch-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 1.8rem;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border: 1px solid var(--border-color);
+        }
+
+        .batch-info h5 {
+            margin-bottom: 0.3rem;
+        }
+
+        .batch-meta {
+            color: var(--text-muted);
+        }
+
+        .seats-left {
+            background: rgba(255, 107, 53, 0.15);
+            color: var(--secondary-color);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        /* certificate preview */
+        .certificate-preview {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+        }
+
+        .certificate-sample {
+            background: linear-gradient(145deg, #f9f9f9, #eaeaea);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .certificate-sample i {
+            font-size: 4rem;
+            color: var(--primary-color);
+        }
+
+        /* dashboard features grid */
+        .dashboard-feature {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.8rem;
+            align-items: center;
+        }
+
+        .dashboard-feature i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            background: rgba(0, 210, 210, 0.1);
+            padding: 1rem;
+            border-radius: 16px;
+        }
+
+        /* faq accordion style (using bootstrap collapse) */
+        .faq-accordion .accordion-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            margin-bottom: 1rem;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-accordion .accordion-button {
+            background: var(--card-bg);
+            color: var(--text-dark);
+            font-weight: 600;
+            box-shadow: none;
+        }
+
+        .faq-accordion .accordion-button:not(.collapsed) {
+            color: var(--primary-color);
+            background: rgba(15, 76, 129, 0.05);
+        }
+
+        .faq-accordion .accordion-body {
+            color: var(--text-muted);
+        }
+
+        /* blog cards */
+        .blog-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-thumb {
+            height: 180px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-content h5 {
+            margin-bottom: 0.8rem;
+        }
+
+        .blog-content .blog-meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* ===== CTA BANNER ===== */
+        .cta-banner {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        .btn-cta {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 1.2rem 3rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            background: #E55A2A;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255, 107, 53, 0.4);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 60px 0 0;
+        }
+
+        .footer-column h5 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .footer-about {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            margin-top: 3rem;
+            padding: 1.5rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Animation classes */
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .zoom-in {
+            animation: zoomIn 0.3s ease forwards;
+        }
+
+        .zoom-out {
+            animation: zoomOut 0.3s ease forwards;
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomOut {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+        }
+
+        /* ===== RESPONSIVE STYLES ===== */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero-illustration {
+                margin-top: 3rem;
+            }
+
+            .step-connector {
+                display: none;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary-custom,
+            .btn-secondary-custom {
+                width: 100%;
+                text-align: center;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+            }
+
+            .navbar-collapse {
+                background: white;
+                padding: 1rem;
+                border-radius: 10px;
+                margin-top: 1rem;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Custom Cursor Elements -->
+    <div class="custom-cursor cursor-ring" id="cursor-ring"></div>
+    <div class="custom-cursor cursor-dot" id="cursor-dot"></div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/8801234567890" class="whatsapp-float" target="_blank"><i class="bi bi-whatsapp"></i></a>
+
+    <!-- Scroll to top button -->
+    <div class="scroll-top-btn" id="scrollTopBtn"><i class="bi bi-arrow-up"></i></div>
+
+    <!-- ===== HEADER / NAVIGATION ===== -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/navlogo.png" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#blog-section">Starter</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#instructors">Instructors</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3 flex-wrap">
+                        <!-- Theme Toggle Dropdown (added) -->
+                        <div class="dropdown theme-dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="themeDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-palette"></i> Theme
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="themeDropdown">
+                                <li><a class="dropdown-item" href="#" data-theme="light"><i class="bi bi-sun"></i>
+                                        Light</a></li>
+                                <li><a class="dropdown-item" href="#" data-theme="dark"><i class="bi bi-moon"></i>
+                                        Dark</a></li>
+                                <li><a class="dropdown-item" href="#" data-theme="auto"><i class="bi bi-laptop"></i>
+                                        Auto</a></li>
+                            </ul>
+                        </div>
+                        <!-- Login/Signup buttons remain -->
+                        <button class="btn btn-login">Login</button>
+                        <button class="btn btn-signup">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title fade-in-up">
+                            Master <span class="highlight">Languages & Programming</span> with Incipient Study
+                        </h1>
+                        <p class="hero-subtitle fade-in-up">
+                            Interactive learning platform for Chinese, Japanese & Coding. Learn at your own pace with
+                            expert instructors and hands-on projects.
+                        </p>
+                        <div class="hero-buttons fade-in-up">
+                            <button class="btn btn-primary-custom">
+                                <i class="bi bi-play-circle"></i> Explore Courses
+                            </button>
+                            <button class="btn btn-secondary-custom">
+                                <i class="bi bi-rocket-takeoff"></i> Start Free Trial
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-illustration">
+                        <img src="assets/images/hero-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURED COURSES CAROUSEL ===== -->
+    <section class="courses-section" id="courses">
+        <div class="container">
+            <h2 class="section-title">Featured Courses</h2>
+            <p class="section-subtitle">Discover our most popular courses and start your learning journey today</p>
+
+            <div id="coursesCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="course-card">
+                                    <div class="course-thumbnail">
+                                        <i class="bi bi-translate"></i>
+                                    </div>
+                                    <div class="course-content">
+                                        <h4 class="course-title">Complete Chinese Language Course</h4>
+                                        <div class="course-meta">
+                                            <span><i class="bi bi-star-fill"></i> 4.8</span>
+                                            <span><i class="bi bi-people-fill"></i> 1,234 students</span>
+                                        </div>
+                                        <div class="course-footer">
+                                            <span class="course-price">৳2,499</span>
+                                            <button class="btn btn-enroll">Enroll Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="course-card">
+                                    <div class="course-thumbnail"
+                                        style="background: linear-gradient(135deg, #E74C3C, #C0392B);">
+                                        <i class="bi bi-flag"></i>
+                                    </div>
+                                    <div class="course-content">
+                                        <h4 class="course-title">Japanese from Beginner to Advanced</h4>
+                                        <div class="course-meta">
+                                            <span><i class="bi bi-star-fill"></i> 4.9</span>
+                                            <span><i class="bi bi-people-fill"></i> 987 students</span>
+                                        </div>
+                                        <div class="course-footer">
+                                            <span class="course-price">৳2,999</span>
+                                            <button class="btn btn-enroll">Enroll Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="course-card">
+                                    <div class="course-thumbnail"
+                                        style="background: linear-gradient(135deg, #3498DB, #2980B9);">
+                                        <i class="bi bi-code-slash"></i>
+                                    </div>
+                                    <div class="course-content">
+                                        <h4 class="course-title">Python Programming Masterclass</h4>
+                                        <div class="course-meta">
+                                            <span><i class="bi bi-star-fill"></i> 4.7</span>
+                                            <span><i class="bi bi-people-fill"></i> 2,156 students</span>
+                                        </div>
+                                        <div class="course-footer">
+                                            <span class="course-price">৳1,999</span>
+                                            <button class="btn btn-enroll">Enroll Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="course-card">
+                                    <div class="course-thumbnail"
+                                        style="background: linear-gradient(135deg, #9B59B6, #8E44AD);">
+                                        <i class="bi bi-braces"></i>
+                                    </div>
+                                    <div class="course-content">
+                                        <h4 class="course-title">C Programming Fundamentals</h4>
+                                        <div class="course-meta">
+                                            <span><i class="bi bi-star-fill"></i> 4.6</span>
+                                            <span><i class="bi bi-people-fill"></i> 1,543 students</span>
+                                        </div>
+                                        <div class="course-footer">
+                                            <span class="course-price">৳1,499</span>
+                                            <button class="btn btn-enroll">Enroll Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="course-card">
+                                    <div class="course-thumbnail"
+                                        style="background: linear-gradient(135deg, #16A085, #1ABC9C);">
+                                        <i class="bi bi-cpu"></i>
+                                    </div>
+                                    <div class="course-content">
+                                        <h4 class="course-title">Advanced C++ Programming</h4>
+                                        <div class="course-meta">
+                                            <span><i class="bi bi-star-fill"></i> 4.8</span>
+                                            <span><i class="bi bi-people-fill"></i> 876 students</span>
+                                        </div>
+                                        <div class="course-footer">
+                                            <span class="course-price">৳2,199</span>
+                                            <button class="btn btn-enroll">Enroll Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="course-card">
+                                    <div class="course-thumbnail"
+                                        style="background: linear-gradient(135deg, #F39C12, #E67E22);">
+                                        <i class="bi bi-filetype-html"></i>
+                                    </div>
+                                    <div class="course-content">
+                                        <h4 class="course-title">Full Stack Web Development</h4>
+                                        <div class="course-meta">
+                                            <span><i class="bi bi-star-fill"></i> 4.9</span>
+                                            <span><i class="bi bi-people-fill"></i> 3,421 students</span>
+                                        </div>
+                                        <div class="course-footer">
+                                            <span class="course-price">৳3,499</span>
+                                            <button class="btn btn-enroll">Enroll Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#coursesCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#coursesCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== COURSE CATEGORIES SECTION ===== -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Explore Course Categories</h2>
+            <p class="section-subtitle">Choose from our diverse range of learning paths</p>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-translate"></i>
+                        </div>
+                        <h4 class="category-title">Chinese Language</h4>
+                        <p class="category-description">Master Mandarin Chinese with comprehensive lessons covering
+                            speaking, reading, and writing</p>
+                        <button class="btn btn-view-courses">View Courses</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-flag"></i>
+                        </div>
+                        <h4 class="category-title">Japanese Language</h4>
+                        <p class="category-description">Learn Japanese from basics to advanced with native pronunciation
+                            and cultural insights</p>
+                        <button class="btn btn-view-courses">View Courses</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-file-code"></i>
+                        </div>
+                        <h4 class="category-title">C Programming</h4>
+                        <p class="category-description">Build strong programming foundations with C language
+                            fundamentals and advanced concepts</p>
+                        <button class="btn btn-view-courses">View Courses</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-cpu"></i>
+                        </div>
+                        <h4 class="category-title">C++</h4>
+                        <p class="category-description">Master object-oriented programming and advanced C++ features for
+                            professional development</p>
+                        <button class="btn btn-view-courses">View Courses</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <h4 class="category-title">Python</h4>
+                        <p class="category-description">Dive into Python programming for data science, web development,
+                            and automation</p>
+                        <button class="btn btn-view-courses">View Courses</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-globe"></i>
+                        </div>
+                        <h4 class="category-title">Web Development</h4>
+                        <p class="category-description">Create stunning websites with HTML, CSS, JavaScript, and modern
+                            frameworks like React</p>
+                        <button class="btn btn-view-courses">View Courses</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PLATFORM STATISTICS ===== -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg col-md-4 col-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <div class="stat-number">
+                            <span class="counter" data-target="5000">0</span>+
+                        </div>
+                        <div class="stat-label">Students</div>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-4 col-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="bi bi-book"></i>
+                        </div>
+                        <div class="stat-number">
+                            <span class="counter" data-target="50">0</span>+
+                        </div>
+                        <div class="stat-label">Courses</div>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-4 col-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="bi bi-person-badge"></i>
+                        </div>
+                        <div class="stat-number">
+                            <span class="counter" data-target="25">0</span>+
+                        </div>
+                        <div class="stat-label">Instructors</div>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-4 col-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="bi bi-trophy"></i>
+                        </div>
+                        <div class="stat-number">
+                            <span class="counter" data-target="95">0</span>%
+                        </div>
+                        <div class="stat-label">Success Rate</div>
+                    </div>
+                </div>
+
+                <div class="col-lg col-md-4 col-6">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="bi bi-award"></i>
+                        </div>
+                        <div class="stat-number">
+                            <span class="counter" data-target="10000">0</span>+
+                        </div>
+                        <div class="stat-label">Certificates</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Incipient Study</h2>
+            <p class="section-subtitle">Empowering learners for a brighter future</p>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="about-content fade-in">
+                        <h3>We bridge the gap between languages and technology</h3>
+                        <p style="color: var(--text-muted); font-size: 1.1rem;">Founded in 2020, Incipient Study has
+                            helped thousands master Chinese, Japanese, and programming. Our mission is to make
+                            high-quality education accessible, interactive, and enjoyable for everyone.</p>
+                        <p style="color: var(--text-muted);">We combine expert instructors, hands-on projects, and a
+                            supportive community to ensure you achieve fluency in both human and computer languages.</p>
+                        <div class="d-flex gap-3 mt-4">
+                            <div><i class="bi bi-check-circle-fill" style="color: var(--success-color);"></i> 5+ years
+                                experience</div>
+                            <div><i class="bi bi-check-circle-fill" style="color: var(--success-color);"></i> Global
+                                community</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-illustration">
+                        <img src="assets/images/about-section-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2️⃣ Upcoming Batches / Enrollment Status -->
+    <section class="batches-section">
+        <div class="container">
+            <h2 class="section-title">Upcoming Batches</h2>
+            <p class="section-subtitle">Enroll now – limited seats available</p>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="batch-card">
+                        <div class="batch-info">
+                            <h5>Chinese Language (HSK 1-3)</h5>
+                            <div class="batch-meta"><i class="bi bi-calendar"></i> Starts 10 March 2025</div>
+                        </div>
+                        <span class="seats-left"><i class="bi bi-people"></i> 12 seats left</span>
+                        <button class="btn btn-enroll mt-2 mt-sm-0">Enroll</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="batch-card">
+                        <div class="batch-info">
+                            <h5>Web Development</h5>
+                            <div class="batch-meta"><i class="bi bi-calendar"></i> Starts 15 March 2025</div>
+                        </div>
+                        <span class="seats-left"><i class="bi bi-people"></i> 8 seats left</span>
+                        <button class="btn btn-enroll mt-2 mt-sm-0">Enroll</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="batch-card">
+                        <div class="batch-info">
+                            <h5>Python for Data Science</h5>
+                            <div class="batch-meta"><i class="bi bi-calendar"></i> Starts 20 March 2025</div>
+                        </div>
+                        <span class="seats-left"><i class="bi bi-people"></i> 20 seats left</span>
+                        <button class="btn btn-enroll mt-2 mt-sm-0">Enroll</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="batch-card">
+                        <div class="batch-info">
+                            <h5>Japanese (N5-N4)</h5>
+                            <div class="batch-meta"><i class="bi bi-calendar"></i> Starts 5 April 2025</div>
+                        </div>
+                        <span class="seats-left"><i class="bi bi-people"></i> 15 seats left</span>
+                        <button class="btn btn-enroll mt-2 mt-sm-0">Enroll</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS SECTION ===== -->
+    <section class="how-it-works-section">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Start your learning journey in just 4 simple steps</p>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h4 class="step-title">Sign Up</h4>
+                        <p class="step-description">Create your free account in seconds and unlock access to our
+                            learning platform</p>
+                        <div class="step-connector"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h4 class="step-title">Choose Course</h4>
+                        <p class="step-description">Browse our catalog and select the perfect course for your learning
+                            goals</p>
+                        <div class="step-connector"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h4 class="step-title">Learn & Practice</h4>
+                        <p class="step-description">Engage with interactive lessons, exercises, and real-world projects
+                        </p>
+                        <div class="step-connector"></div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h4 class="step-title">Get Certified</h4>
+                        <p class="step-description">Complete your course and receive a certificate to showcase your
+                            skills</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== KEY FEATURES SECTION ===== -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Incipient Study?</h2>
+            <p class="section-subtitle">Powerful features to enhance your learning experience</p>
+
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-terminal"></i>
+                        </div>
+                        <h4 class="feature-title">Interactive Code Editor</h4>
+                        <p class="feature-description">Practice coding directly in your browser with our built-in IDE
+                            and instant feedback</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-lightning"></i>
+                        </div>
+                        <h4 class="feature-title">Real-time Feedback</h4>
+                        <p class="feature-description">Get instant results and corrections as you learn to accelerate
+                            your progress</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
+                        <h4 class="feature-title">Progress Tracking</h4>
+                        <p class="feature-description">Monitor your learning journey with detailed analytics and
+                            achievement milestones</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-controller"></i>
+                        </div>
+                        <h4 class="feature-title">Gamification</h4>
+                        <p class="feature-description">Earn points, badges, and compete on leaderboards to stay
+                            motivated</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-person-video3"></i>
+                        </div>
+                        <h4 class="feature-title">Expert Instructors</h4>
+                        <p class="feature-description">Learn from industry professionals with years of teaching
+                            experience</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-infinity"></i>
+                        </div>
+                        <h4 class="feature-title">Lifetime Access</h4>
+                        <p class="feature-description">One-time payment for unlimited access to course materials and
+                            updates</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <h4 class="feature-title">Mobile Friendly</h4>
+                        <p class="feature-description">Learn anytime, anywhere with our responsive mobile-optimized
+                            platform</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="bi bi-patch-check"></i>
+                        </div>
+                        <h4 class="feature-title">Certificate</h4>
+                        <p class="feature-description">Receive verified certificates upon completion to boost your
+                            career</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INSTRUCTORS SECTION ===== -->
+    <section class="instructors-section" id="instructors">
+        <div class="container">
+            <h2 class="section-title">Meet Our Expert Instructors</h2>
+            <p class="section-subtitle">Learn from the best in language and programming</p>
+            <div id="instructorsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="instructor-card zoom-in">
+                                    <div class="instructor-avatar">李</div>
+                                    <h4>Maryam Tahira</h4>
+                                    <p style="color:var(--text-muted)">Chinese Language</p>
+                                    <p>10+ years teaching Mandarin</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="instructor-card zoom-in">
+                                    <div class="instructor-avatar">佐藤</div>
+                                    <h4>Halima Khatun</h4>
+                                    <p style="color:var(--text-muted)">Japanese Language</p>
+                                    <p>Native speaker, certified</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="instructor-card zoom-in">
+                                    <div class="instructor-avatar">C</div>
+                                    <h4>Rezaul Zannat Eiva</h4>
+                                    <p style="color:var(--text-muted)">C/C++ Expert</p>
+                                    <p>15 years embedded systems</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="instructor-card zoom-in">
+                                    <div class="instructor-avatar">Py</div>
+                                    <h4>Sarah Khan</h4>
+                                    <p style="color:var(--text-muted)">Python & Data Science</p>
+                                    <p>Lead data scientist</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="instructor-card zoom-in">
+                                    <div class="instructor-avatar">JS</div>
+                                    <h4>Munira Chowdhury</h4>
+                                    <p style="color:var(--text-muted)">Web Development</p>
+                                    <p>Full-stack developer</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="instructor-card zoom-in">
+                                    <div class="instructor-avatar">日</div>
+                                    <h4>Maryam Tahira</h4>
+                                    <p style="color:var(--text-muted)">Japanese Advanced</p>
+                                    <p>JLPT N1 instructor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#instructorsCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#instructorsCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6️⃣ Blog / Learning Resources Section -->
+    <section class="blog-section">
+        <div class="container">
+            <h2 class="section-title">Free Learning Resources</h2>
+            <p class="section-subtitle">Tips, guides, and insights from our experts</p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="blog-card">
+                        <div class="blog-thumb"><i class="bi bi-translate"></i></div>
+                        <div class="blog-content">
+                            <h5>5 tips to learn Chinese tones</h5>
+                            <p class="blog-meta"><i class="bi bi-calendar"></i> Feb 12, 2025</p>
+                            <p class="text-muted">Master pronunciation with these simple techniques...</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-card">
+                        <div class="blog-thumb"><i class="bi bi-code-slash"></i></div>
+                        <div class="blog-content">
+                            <h5>Python vs C: which first?</h5>
+                            <p class="blog-meta"><i class="bi bi-calendar"></i> Jan 28, 2025</p>
+                            <p class="text-muted">A beginner's guide to choosing your first language...</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-card">
+                        <div class="blog-thumb"><i class="bi bi-briefcase"></i></div>
+                        <div class="blog-content">
+                            <h5>Career roadmap for web dev</h5>
+                            <p class="blog-meta"><i class="bi bi-calendar"></i> Jan 15, 2025</p>
+                            <p class="text-muted">From junior to senior developer – what to learn...</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS SLIDER ===== -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Students Say</h2>
+            <p class="section-subtitle">Hear from learners who transformed their careers with us</p>
+
+            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <i class="bi bi-quote quote-icon"></i>
+                                    <div class="testimonial-content">
+                                        "Incipient Study completely transformed my programming journey. The interactive
+                                        exercises and expert guidance helped me land my dream job as a software
+                                        developer!"
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <div class="author-avatar">RH</div>
+                                        <div class="author-info">
+                                            <h5>Rafiul Hasan</h5>
+                                            <p>Python Programming Graduate</p>
+                                            <div class="testimonial-rating">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <i class="bi bi-quote quote-icon"></i>
+                                    <div class="testimonial-content">
+                                        "Learning Japanese has never been easier! The structured lessons and cultural
+                                        insights made the experience both educational and enjoyable. Highly recommend!"
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <div class="author-avatar">SA</div>
+                                        <div class="author-info">
+                                            <h5>Sadia Ahmed</h5>
+                                            <p>Japanese Language Student</p>
+                                            <div class="testimonial-rating">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <i class="bi bi-quote quote-icon"></i>
+                                    <div class="testimonial-content">
+                                        "The web development course gave me all the skills I needed to start
+                                        freelancing. Within 3 months, I built my first client website!"
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <div class="author-avatar">TI</div>
+                                        <div class="author-info">
+                                            <h5>Tanvir Islam</h5>
+                                            <p>Web Development Graduate</p>
+                                            <div class="testimonial-rating">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <i class="bi bi-quote quote-icon"></i>
+                                    <div class="testimonial-content">
+                                        "The Chinese language course exceeded my expectations. Native pronunciation
+                                        practice and real-world scenarios made learning practical and fun!"
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <div class="author-avatar">NK</div>
+                                        <div class="author-info">
+                                            <h5>Nusrat Khan</h5>
+                                            <p>Chinese Language Student</p>
+                                            <div class="testimonial-rating">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-half"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <i class="bi bi-quote quote-icon"></i>
+                                    <div class="testimonial-content">
+                                        "C++ course was challenging but incredibly rewarding. The instructors break down
+                                        complex topics into digestible lessons. Now I'm confident in my coding
+                                        abilities!"
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <div class="author-avatar">MR</div>
+                                        <div class="author-info">
+                                            <h5>Mehedi Rahman</h5>
+                                            <p>C++ Programming Graduate</p>
+                                            <div class="testimonial-rating">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="testimonial-card">
+                                    <i class="bi bi-quote quote-icon"></i>
+                                    <div class="testimonial-content">
+                                        "As a complete beginner, I was nervous about learning programming. But Incipient
+                                        Study's patient instructors and interactive platform made it so easy!"
+                                    </div>
+                                    <div class="testimonial-author">
+                                        <div class="author-avatar">FH</div>
+                                        <div class="author-info">
+                                            <h5>Farhana Haque</h5>
+                                            <p>C Programming Student</p>
+                                            <div class="testimonial-rating">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NEW SECTIONS START HERE ===== -->
+    <!-- 1️⃣ Learning Path / Roadmap -->
+    <section class="roadmap-section">
+        <div class="container">
+            <h2 class="section-title">Your Learning Path with Incipient Study</h2>
+            <p class="section-subtitle">Structured roadmap from beginner to pro in languages & programming</p>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="roadmap-card">
+                        <span class="level">Beginner</span>
+                        <h4>Language fundamentals</h4>
+                        <p class="text-muted">Basic vocabulary, grammar, pronunciation. For programming: syntax & logic.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="roadmap-card">
+                        <span class="level">Intermediate</span>
+                        <h4>Conversation & projects</h4>
+                        <p class="text-muted">Speaking practice, reading comprehension, small coding projects.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="roadmap-card">
+                        <span class="level">Advanced</span>
+                        <h4>Fluency & mastery</h4>
+                        <p class="text-muted">Advanced grammar, specialized vocabulary, full-stack applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 3️⃣ Certificates Preview Section -->
+    <section class="certificate-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="certificate-preview">
+                        <div class="certificate-sample">
+                            <i class="bi bi-award"></i>
+                            <h3 class="mt-3">Certificate of Completion</h3>
+                            <p class="text-muted">Incipient Study</p>
+                            <hr>
+                            <p><i class="bi bi-check-circle-fill text-success"></i> Verified & shareable</p>
+                            <p><i class="bi bi-qr-code"></i> Unique QR code for verification</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title text-start">Industry-recognized certificates</h2>
+                    <p class="text-muted" style="font-size: 1.1rem;">Earn certificates that showcase your skills. Each
+                        certificate includes a unique link and QR code for easy verification by employers.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <span class="badge bg-primary p-3">Globally accepted</span>
+                        <span class="badge bg-success p-3">Lifetime access</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4️⃣ Platform Features / Student Dashboard Preview -->
+    <section class="platform-features-section">
+        <div class="container">
+            <h2 class="section-title">Student Dashboard & Features</h2>
+            <p class="section-subtitle">Everything you need in one place</p>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <div class="dashboard-feature">
+                                <i class="bi bi-camera-reel"></i>
+                                <div><strong>Recorded classes</strong><br><small class="text-muted">Watch
+                                        anytime</small></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="dashboard-feature">
+                                <i class="bi bi-mic"></i>
+                                <div><strong>Live class access</strong><br><small class="text-muted">Interactive
+                                        sessions</small></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="dashboard-feature">
+                                <i class="bi bi-pencil-square"></i>
+                                <div><strong>Assignment submission</strong><br><small class="text-muted">Get
+                                        feedback</small></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="dashboard-feature">
+                                <i class="bi bi-graph-up-arrow"></i>
+                                <div><strong>Progress tracking</strong><br><small class="text-muted">Monitor
+                                        growth</small></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="dashboard-feature">
+                                <i class="bi bi-download"></i>
+                                <div><strong>Certificate download</strong><br><small
+                                        class="text-muted">Shareable</small></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="dashboard-feature">
+                                <i class="bi bi-people"></i>
+                                <div><strong>Community forum</strong><br><small class="text-muted">Peer support</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image-placeholder"
+                        style="height: 300px; background: var(--card-bg); border: 2px dashed var(--border-color);">
+                        <i class="bi bi-laptop" style="font-size: 5rem;"></i>
+                        <span class="ms-2">Dashboard Preview</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5️⃣ FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Got questions? We've got answers.</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion faq-accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq1">Course duration কত?</button></h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Most courses are 6-8 weeks long, with 2-3 hours of weekly
+                                    commitment. Self-paced options available.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq2">Live না recorded?</button></h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">We offer both! Live sessions for interaction, and recorded
+                                    versions for flexibility.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq3">Certificate থাকবে?</button></h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes, every course includes a verified certificate upon
+                                    completion.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq4">Support কিভাবে?</button></h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">24/7 chat support, email, and community forum. Instructors
+                                    also hold weekly Q&A.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq5">Payment method?</button></h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">bKash, Nagad, credit/debit cards, and bank transfer
+                                    accepted.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== CALL TO ACTION BANNER ===== -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Start Your Learning Journey?</h2>
+                <p class="cta-subtitle">Join thousands of students who are already mastering new skills with Incipient
+                    Study</p>
+                <button class="btn btn-cta">
+                    <i class="bi bi-rocket-takeoff"></i> Start Learning Now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION (new) ===== -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">We'd love to hear from you. Send us a message and we'll respond as soon as
+                possible.</p>
+
+            <div class="row g-5 align-items-stretch">
+                <!-- Contact Form Card -->
+                <div class="col-lg-6">
+                    <div class="contact-card h-100">
+                        <div class="contact-card-header">
+                            <i class="bi bi-chat-dots-fill"></i>
+                            <h4>Send a Message</h4>
+                        </div>
+                        <form class="contact-form">
+                            <div class="mb-4">
+                                <label class="form-label">Your Name</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                                    <input type="text" class="form-control" placeholder="John Doe" required>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Email Address</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                                    <input type="email" class="form-control" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Message</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-pencil"></i></span>
+                                    <textarea class="form-control" rows="5" placeholder="Your message..."></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-submit w-100">
+                                <i class="bi bi-send"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info Card -->
+                <div class="col-lg-6">
+                    <div class="contact-info-card h-100">
+                        <div class="contact-card-header">
+                            <i class="bi bi-info-circle-fill"></i>
+                            <h4>Contact Information</h4>
+                        </div>
+                        <div class="contact-details">
+                            <div class="detail-item">
+                                <div class="icon-box">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                                <div>
+                                    <h5>Our Location</h5>
+                                    <p>Chattogram, Bangladesh</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="icon-box">
+                                    <i class="bi bi-envelope-fill"></i>
+                                </div>
+                                <div>
+                                    <h5>Email Us</h5>
+                                    <p><a href="mailto:hello@incipientstudy.com">hello@incipientstudy.com</a></p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="icon-box">
+                                    <i class="bi bi-telephone-fill"></i>
+                                </div>
+                                <div>
+                                    <h5>Call Us</h5>
+                                    <p>+880 1234-567890</p>
+                                </div>
+                            </div>
+                            <div class="detail-item">
+                                <div class="icon-box">
+                                    <i class="bi bi-clock-fill"></i>
+                                </div>
+                                <div>
+                                    <h5>Office Hours</h5>
+                                    <p>Mon - Fri: 9AM - 6PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-links-circle">
+                            <a href="#" class="social-circle"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="social-circle"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="social-circle"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="social-circle"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                        <!-- subtle map decoration -->
+                        <div class="map-decoration">
+                            <i class="bi bi-map"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NEWSLETTER SECTION ===== -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">Stay Updated</h2>
+                <p class="newsletter-description">Subscribe to our newsletter and get the latest course updates,
+                    learning tips, and exclusive offers</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-subscribe">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-column">
+                        <h5>About Incipient Study</h5>
+                        <p class="footer-about">
+                            Your trusted partner in learning languages and programming. We provide high-quality,
+                            interactive courses to help you achieve your goals.
+                        </p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-column">
+                        <h5>Quick Links</h5>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#blog">Instructors</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-column">
+                        <h5>Courses</h5>
+                        <ul>
+                            <li><a href="#">Chinese Language</a></li>
+                            <li><a href="#">Japanese Language</a></li>
+                            <li><a href="#">C Programming</a></li>
+                            <li><a href="#">C++ Programming</a></li>
+                            <li><a href="#">Python</a></li>
+                            <li><a href="#">Web Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-column">
+                        <h5>Contact Info</h5>
+                        <ul>
+                            <li><i class="bi bi-geo-alt"></i> Chattogram, Bangladesh</li>
+                            <li><i class="bi bi-envelope"></i> <a href="/cdn-cgi/l/email-protection"
+                                    class="__cf_email__"
+                                    data-cfemail="7d14131b123d14131e140d14181309500e09081904531e1210">[email&#160;protected]</a>
+                            </li>
+                            <li><i class="bi bi-telephone"></i> +880 1234-567890</li>
+                            <li><i class="bi bi-clock"></i> Mon - Fri: 9AM - 6PM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Incipient Study. All rights reserved. Designed with <i class="bi bi-heart-fill"
+                        style="color: #FF6B35;"></i> for learners worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery (required by custom scripts) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        $(document).ready(function () {
+            // ----- STICKY HEADER -----
+            $(window).on('scroll', function () {
+                if ($(window).scrollTop() > 100) {
+                    $('.main-header').addClass('scrolled');
+                } else {
+                    $('.main-header').removeClass('scrolled');
+                }
+            });
+
+            // Scroll to top button logic
+            $(window).on('scroll', function () {
+                if ($(this).scrollTop() > 300) {
+                    $('#scrollTopBtn').addClass('show');
+                } else {
+                    $('#scrollTopBtn').removeClass('show');
+                }
+            });
+
+            $('#scrollTopBtn').on('click', function () {
+                $('html, body').animate({ scrollTop: 0 }, 600);
+            });
+
+            // ----- SCROLL PROGRESS BAR (visible as soon as you scroll) -----
+            $(window).on('scroll', function () {
+                var winScroll = $(this).scrollTop();
+                var height = $(document).height() - $(window).height();
+                var scrolled = (winScroll / height) * 100;
+                $('#scroll-progress').css('width', scrolled + '%');
+            });
+
+            // ----- THEME TOGGLE (Light / Dark / Auto) -----
+            function setTheme(theme) {
+                if (theme === 'light') {
+                    $('body').attr('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                } else if (theme === 'dark') {
+                    $('body').attr('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                } else if (theme === 'auto') {
+                    localStorage.setItem('theme', 'auto');
+                    applyAutoTheme();
+                }
+            }
+            function applyAutoTheme() {
+                var hours = new Date().getHours();
+                if (hours >= 5 && hours < 17) {
+                    $('body').attr('data-theme', 'light');
+                } else {
+                    $('body').attr('data-theme', 'dark');
+                }
+            }
+            var savedTheme = localStorage.getItem('theme') || 'light';
+            if (savedTheme === 'auto') {
+                applyAutoTheme();
+            } else {
+                $('body').attr('data-theme', savedTheme);
+            }
+            $('.dropdown-item[data-theme]').on('click', function (e) {
+                e.preventDefault();
+                var theme = $(this).data('theme');
+                setTheme(theme);
+            });
+            setInterval(function () {
+                if (localStorage.getItem('theme') === 'auto') {
+                    applyAutoTheme();
+                }
+            }, 60000);
+
+            // ----- CUSTOM CURSOR (dot + ring) now moves and default cursor hidden via CSS -----
+            $(document).on('mousemove', function (e) {
+                $('#cursor-ring, #cursor-dot').css({
+                    left: e.clientX + 'px',
+                    top: e.clientY + 'px'
+                });
+            });
+            $(document).on('mouseenter', 'a, button, .course-card, .category-card, .instructor-card', function () {
+                $('#cursor-ring').css({ width: '48px', height: '48px', borderColor: 'var(--secondary-color)' });
+            }).on('mouseleave', 'a, button, .course-card, .category-card, .instructor-card', function () {
+                $('#cursor-ring').css({ width: '32px', height: '32px', borderColor: 'var(--cursor-ring)' });
+            });
+
+            // ----- ANIMATED COUNTER -----
+            var animated = false;
+            function startCounters() {
+                if (animated) return;
+                var statsTop = $('.stats-section').offset().top;
+                var scrollTop = $(window).scrollTop() + $(window).height() * 0.7;
+                if (scrollTop > statsTop && !animated) {
+                    $('.counter').each(function () {
+                        var $this = $(this);
+                        var target = parseInt($this.data('target'));
+                        var current = 0;
+                        var step = target / 60;
+                        var timer = setInterval(function () {
+                            current += step;
+                            if (current >= target) {
+                                $this.text(target.toLocaleString());
+                                clearInterval(timer);
+                            } else {
+                                $this.text(Math.floor(current).toLocaleString());
+                            }
+                        }, 20);
+                    });
+                    animated = true;
+                }
+            }
+            $(window).on('scroll', startCounters);
+            startCounters();
+
+            // ----- SMOOTH SCROLL FOR NAVIGATION -----
+            $('a[href^="#"]').on('click', function (e) {
+                var href = $(this).attr('href');
+                if (href !== '#' && $(href).length) {
+                    e.preventDefault();
+                    var target = $(href);
+                    var headerHeight = $('.main-header').outerHeight();
+                    $('html, body').animate({ scrollTop: target.offset().top - headerHeight }, 600);
+                }
+            });
+
+            // ----- NEWSLETTER FORM -----
+            $('.newsletter-form').on('submit', function (e) {
+                e.preventDefault();
+                var email = $(this).find('input[type="email"]').val();
+                alert('Thank you for subscribing! We will send updates to: ' + email);
+                $(this).trigger('reset');
+            });
+
+            // ----- CONTACT FORM -----
+            $('.contact-form').on('submit', function (e) {
+                e.preventDefault();
+                alert('Your message has been sent. We will get back to you soon!');
+                $(this).trigger('reset');
+            });
+
+            // ----- TEXT ANIMATIONS (fade-in on scroll) -----
+            function textAnimations() {
+                $('.section-title, .hero-title, .about-content p, .step-card, .feature-card, .instructor-card').each(function () {
+                    var elemTop = $(this).offset().top;
+                    var scrollBottom = $(window).scrollTop() + $(window).height() * 0.85;
+                    if (scrollBottom > elemTop) {
+                        $(this).addClass('fade-in');
+                    } else {
+                        $(this).removeClass('fade-in');
+                    }
+                });
+            }
+            $(window).on('scroll', textAnimations);
+            textAnimations();
+
+            // ----- ICONS ANIMATIONS (zoom on hover) -----
+            $('.category-icon, .feature-icon, .step-number, .instructor-avatar').on('mouseenter', function () {
+                $(this).addClass('zoom-in').removeClass('zoom-out');
+            }).on('mouseleave', function () {
+                $(this).addClass('zoom-out').removeClass('zoom-in');
+            });
+
+            function revealOnScroll() {
+                $('.roadmap-card, .batch-card, .certificate-preview, .dashboard-feature, .faq-accordion .accordion-item, .blog-card').each(function () {
+                    var elemTop = $(this).offset().top;
+                    var scrollBottom = $(window).scrollTop() + $(window).height() * 0.85;
+                    if (scrollBottom > elemTop) {
+                        $(this).addClass('fade-in-up');
+                    }
+                });
+            }
+            $(window).on('scroll', revealOnScroll);
+            revealOnScroll();
+        });
+    </script>
+</body>
+
+</html>

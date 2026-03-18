@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Courses — Incipient Study</title>
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+</head>
+
+<body data-theme="light">
+        <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/+8801234567890" class="whatsapp-float" target="_blank" rel="noopener">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scroll to Top Button -->
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <i class="bi bi-mortarboard-fill" style="font-size:1.5rem;background:linear-gradient(135deg,#086A7C,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;"></i>
+                <span class="navbar-brand-text">Incipient Study</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainNav" aria-controls="navbarMainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMainNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-1">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="roadmaps.html">Roadmaps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="learn-free.html">Learn for Free</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="instructors.html">Instructors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item dropdown theme-dropdown ms-1">
+                        <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="themeToggle">
+                            <i class="bi bi-moon-stars-fill" id="themeIcon"></i> Theme
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#" data-theme="light"><i class="bi bi-sun-fill me-2"></i>Light</a></li>
+                            <li><a class="dropdown-item" href="#" data-theme="dark"><i class="bi bi-moon-stars-fill me-2"></i>Dark</a></li>
+                            <li><a class="dropdown-item" href="#" data-theme="auto"><i class="bi bi-circle-half me-2"></i>Auto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-1"><a href="contact.html" class="btn-nav-enroll">Enroll Now</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="courses-hero">
+        <div class="floating-element floating-1"></div>
+        <div class="floating-element floating-2"></div>
+        <div class="floating-element floating-3"></div>
+
+        <div class="hero-shapes"><span></span><span></span><span></span></div>
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="hero-breadcrumb" data-aos="fade-up">
+                <a href="index.html"><i class="bi bi-house-fill me-1"></i>Home</a>
+                <span><i class="bi bi-chevron-right"></i></span>
+                <span style="color:white;font-weight:600;">All Courses</span>
+            </div>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="50">
+                Explore All<br><span>Courses</span>
+            </h1>
+            <p class="hero-sub" data-aos="fade-up" data-aos-delay="120">
+                Languages, Programming &amp; Professional Skills &mdash; structured, certified, and taught by expert
+                instructors across 4 countries.
+            </p>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="200">
+                <div class="hero-stat"><strong>8</strong><span>Courses</span></div>
+                <div class="hero-stat"><strong>14+</strong><span>Batches Done</span></div>
+                <div class="hero-stat"><strong>4</strong><span>Countries</span></div>
+                <div class="hero-stat"><strong><i class="bi bi-patch-check-fill"></i></strong><span>Certificate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sticky Filter Bar -->
+    <div class="filter-bar">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                <div class="d-flex gap-2 flex-wrap">
+                    <button class="filter-tab active" data-filter="all">All Courses</button>
+                    <button class="filter-tab" data-filter="programming"><i
+                            class="bi bi-code-slash me-1"></i>Programming</button>
+                    <button class="filter-tab" data-filter="language"><i
+                            class="bi bi-translate me-1"></i>Languages</button>
+                    <button class="filter-tab" data-filter="skills"><i class="bi bi-person-raised-hand me-1"></i>Soft
+                        Skills</button>
+                    <button class="filter-tab" data-filter="upcoming"><i
+                            class="bi bi-hourglass-split me-1"></i>Upcoming</button>
+                </div>
+                <div class="search-box">
+                    <i class="bi bi-search"></i>
+                    <input type="text" id="courseSearch" placeholder="Search courses&hellip;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Grid -->
+    <section class="courses-main">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-end mb-4 flex-wrap gap-2">
+                <div>
+                    <span class="section-label"><i class="bi bi-mortarboard-fill"></i> Course Catalog</span>
+                    <h2 class="section-heading">All <span>Available Courses</span></h2>
+                </div>
+                <p class="result-count" id="resultCount">Showing 8 courses</p>
+            </div>
+
+            <div class="row g-4" id="coursesGrid">
+
+                <!-- 1. C Programming -->
+                <div class="col-lg-4 col-md-6 course-item" data-category="programming"
+                    data-name="c programming variables loops pointers memory" data-aos="fade-up" data-aos-delay="50">
+                    <div class="course-card">
+                        <div class="course-thumb" style="background:linear-gradient(135deg,#00bcd4,#086A7C);">
+                            <div class="thumb-shine"></div>
+                            <i class="bi bi-terminal-fill course-thumb-icon"></i>
+                            <span class="course-badge" style="background:linear-gradient(135deg,#f5576c,#c0392b);"><i
+                                    class="bi bi-fire me-1"></i>5 Batches</span>
+                            <span class="course-cat-tag"><i class="bi bi-code-slash me-1"></i>Programming</span>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">C Programming</h3>
+                            <p class="course-description">Master the foundation of all programming. Learn memory
+                                management, pointers, and systems-level thinking that makes every other language feel
+                                easier.</p>
+                            <div class="skill-chips">
+                                <span class="skill-chip">Variables & Arrays</span>
+                                <span class="skill-chip">Loops & Functions</span>
+                                <span class="skill-chip">Pointers</span>
+                                <span class="skill-chip">File I/O</span>
+                                <span class="skill-chip">Structs</span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="course-meta-item"><i class="bi bi-bar-chart-steps"></i><span>Beginner</span>
+                                </div>
+                                <div class="course-meta-item"><i class="bi bi-collection-fill"></i><span>5
+                                        Batches</span></div>
+                                <div class="course-meta-item"><i
+                                        class="bi bi-patch-check-fill"></i><span>Certificate</span></div>
+                            </div>
+                            <div class="course-actions">
+                                <a href="index.html#contact" class="course-btn">Enroll Now</a>
+                                <a href="starter.html#roadmap-c" class="course-btn-outline">Roadmap</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. C++ -->
+                <div class="col-lg-4 col-md-6 course-item" data-category="programming"
+                    data-name="c++ oop object oriented stl inheritance polymorphism" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="course-card">
+                        <div class="course-thumb" style="background:linear-gradient(135deg,#764ba2,#c471ed);">
+                            <div class="thumb-shine"></div>
+                            <i class="bi bi-cpu-fill course-thumb-icon"></i>
+                            <span class="course-badge"
+                                style="background:linear-gradient(135deg,#764ba2,#c471ed);filter:brightness(1.2);"><i
+                                    class="bi bi-gem me-1"></i>Advanced</span>
+                            <span class="course-cat-tag"><i class="bi bi-code-slash me-1"></i>Programming</span>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">C++ Programming</h3>
+                            <p class="course-description">Level up from C to full Object-Oriented Programming. Classes,
+                                inheritance, polymorphism, and the Standard Template Library.</p>
+                            <div class="skill-chips">
+                                <span class="skill-chip">Classes & OOP</span>
+                                <span class="skill-chip">Inheritance</span>
+                                <span class="skill-chip">Polymorphism</span>
+                                <span class="skill-chip">STL</span>
+                                <span class="skill-chip">Templates</span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="course-meta-item"><i
+                                        class="bi bi-bar-chart-steps"></i><span>Intermediate</span></div>
+                                <div class="course-meta-item"><i class="bi bi-collection-fill"></i><span>1 Batch</span>
+                                </div>
+                                <div class="course-meta-item"><i
+                                        class="bi bi-patch-check-fill"></i><span>Certificate</span></div>
+                            </div>
+                            <div class="course-actions">
+                                <a href="index.html#contact" class="course-btn">Enroll Now</a>
+                                <a href="starter.html#roadmap-cpp" class="course-btn-outline">Roadmap</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Python -->
+                <div class="col-lg-4 col-md-6 course-item" data-category="programming"
+                    data-name="python scripting automation data oop" data-aos="fade-up" data-aos-delay="150">
+                    <div class="course-card">
+                        <div class="course-thumb" style="background:linear-gradient(135deg,#f7971e,#ffd200);">
+                            <div class="thumb-shine"></div>
+                            <i class="bi bi-filetype-py course-thumb-icon"></i>
+                            <span class="course-badge" style="background:linear-gradient(135deg,#f5576c,#c0392b);"><i
+                                    class="bi bi-rocket-takeoff-fill me-1"></i>Popular</span>
+                            <span class="course-cat-tag"><i class="bi bi-code-slash me-1"></i>Programming</span>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Python Programming</h3>
+                            <p class="course-description">The world's most popular language. From beginner basics to
+                                OOP, file handling, and real-world mini projects you can put on your portfolio.</p>
+                            <div class="skill-chips">
+                                <span class="skill-chip">Lists & Dicts</span>
+                                <span class="skill-chip">Functions</span>
+                                <span class="skill-chip">OOP & Classes</span>
+                                <span class="skill-chip">File Handling</span>
+                                <span class="skill-chip">Projects</span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="course-meta-item"><i class="bi bi-bar-chart-steps"></i><span>Beginner
+                                        &ndash; Intermediate</span></div>
+                                <div class="course-meta-item"><i class="bi bi-collection-fill"></i><span>1 Batch</span>
+                                </div>
+                                <div class="course-meta-item"><i
+                                        class="bi bi-patch-check-fill"></i><span>Certificate</span></div>
+                            </div>
+                            <div class="course-actions">
+                                <a href="index.html#contact" class="course-btn">Enroll Now</a>
+                                <a href="starter.html#roadmap-python" class="course-btn-outline">Roadmap</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Full Stack Laravel (Upcoming) -->
+                <div class="col-lg-4 col-md-6 course-item" data-category="programming upcoming"
+                    data-name="full stack laravel web development html css javascript php" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="course-card upcoming-card">
+                        <div class="course-thumb" style="background:linear-gradient(135deg,#e44d26,#f55247);">
+                            <div class="thumb-shine"></div>
+                            <i class="bi bi-globe2 course-thumb-icon"></i>
+                            <span class="course-badge" style="background:linear-gradient(135deg,#f5af19,#f12711);"><i
+                                    class="bi bi-stars me-1"></i>Upcoming</span>
+                            <span class="course-cat-tag"><i class="bi bi-globe2 me-1"></i>Web Dev</span>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Full Stack Web Development (Laravel)</h3>
+                            <p class="course-description">The complete web dev journey — HTML, CSS, JavaScript, and
+                                Laravel backend. A free introductory workshop has already been conducted. Full course
+                                launching soon.</p>
+                            <div class="skill-chips">
+                                <span class="skill-chip">HTML & CSS</span>
+                                <span class="skill-chip">JavaScript</span>
+                                <span class="skill-chip">Laravel MVC</span>
+                                <span class="skill-chip">Databases</span>
+                                <span class="skill-chip">REST APIs</span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="course-meta-item"><i
+                                        class="bi bi-bar-chart-steps"></i><span>Intermediate</span></div>
+                                <div class="course-meta-item"><i class="bi bi-calendar-event"></i><span>Free Workshop
+                                        Done</span></div>
+                                <div class="course-meta-item"><i
+                                        class="bi bi-patch-check-fill"></i><span>Certificate</span></div>
+                            </div>
+                            <div class="course-actions">
+                                <a href="index.html#contact" class="course-btn upcoming">Notify Me</a>
+                                <a href="starter.html#roadmap-webdev" class="course-btn-outline">Roadmap</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Chinese -->
+                <div class="col-lg-4 col-md-6 course-item" data-category="language"
+                    data-name="chinese mandarin hsk pinyin hanzi tones" data-aos="fade-up" data-aos-delay="250">
+                    <div class="course-card">
+                        <div class="course-thumb" style="background:linear-gradient(135deg,#c0392b,#e74c3c);">
+                            <div class="thumb-shine"></div>
+                            <span class="course-thumb-char">&#20013;</span>
+                            <span class="course-badge" style="background:linear-gradient(135deg,#f5576c,#c0392b);"><i
+                                    class="bi bi-translate me-1"></i>2 Batches</span>
+                            <span class="course-cat-tag"><i class="bi bi-translate me-1"></i>Language</span>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Chinese Language (HSK 1 &amp; 2)</h3>
+                            <p class="course-description">From Pinyin and 4 tones to 300+ vocabulary words. A structured
+                                path aligned with the official HSK curriculum, built for complete beginners.</p>
+                            <div class="skill-chips">
+                                <span class="skill-chip">4 Tones & Pinyin</span>
+                                <span class="skill-chip">HSK 1 Vocabulary</span>
+                                <span class="skill-chip">HSK 2 Grammar</span>
+                                <span class="skill-chip">Hanzi Characters</span>
+                                <span class="skill-chip">Conversation</span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="course-meta-item"><i class="bi bi-bar-chart-steps"></i><span>Beginner</span>
+                                </div>
+                                <div class="course-meta-item"><i class="bi bi-collection-fill"></i><span>2
+                                        Batches</span></div>
+                                <div class="course-meta-item"><i
+                                        class="bi bi-patch-check-fill"></i><span>Certificate</span></div>
+                            </div>
+                            <div class="course-actions">
+                                <a href="index.html#contact" class="course-btn">Enroll Now</a>
+                                <a href="starter.html#roadmap-chinese" class="course-btn-outline">Roadmap</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Japanese -->
+                <div class="col-lg-4 col-md-6 course-item" data-category="language"
+                    data-name="japanese jlpt n5 hiragana katakana kanji grammar" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div class="course-card">
+                        <div class="course-thumb" style="background:linear-gradient(135deg,#e74c3c,#f5576c);">
+                            <div class="thumb-shine"></div>
+                            <span class="course-thumb-char">&#26085;</span>
+                            <span class="course-badge" style="background:linear-gradient(135deg,#764ba2,#c471ed);"><i
+                                    class="bi bi-translate me-1"></i>New</span>
+                            <span class="course-cat-tag"><i class="bi bi-translate me-1"></i>Language</span>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Japanese Language (N5)</h3>
+                            <p class="course-description">Master Hiragana, Katakana, core particles, verb conjugation,
+                                and 80 essential Kanji. Structured for JLPT N5 exam readiness.</p>
+                            <div class="skill-chips">
+                                <span class="skill-chip">Hiragana & Katakana</span>
+                                <span class="skill-chip">Particles</span>
+                                <span class="skill-chip">Verb Conjugation</span>
+                                <span class="skill-chip">80 Kanji</span>
+                                <span class="skill-chip">JLPT N5 Prep</span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="course-meta-item"><i class="bi bi-bar-chart-steps"></i><span>Beginner</span>
+                                </div>
+                                <div class="course-meta-item"><i class="bi bi-collection-fill"></i><span>1 Batch</span>
+                                </div>
+                                <div class="course-meta-item"><i
+                                        class="bi bi-patch-check-fill"></i><span>Certificate</span></div>
+                            </div>
+                            <div class="course-actions">
+                                <a href="index.html#contact" class="course-btn">Enroll Now</a>
+                                <a href="starter.html#roadmap-japanese" class="course-btn-outline">Roadmap</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. English Grammar -->
+                <div class="col-lg-4 col-md-6 course-item" data-category="language"
+                    data-name="english grammar tenses conditionals writing communication" data-aos="fade-up"
+                    data-aos-delay="350">
+                    <div class="course-card">
+                        <div class="course-thumb" style="background:linear-gradient(135deg,#3399ff,#0066cc);">
+                            <div class="thumb-shine"></div>
+                            <i class="bi bi-alphabet course-thumb-icon"></i>
+                            <span class="course-badge"
+                                style="background:linear-gradient(135deg,#43e97b,#38f9d7);color:#1a1a2e;"><i
+                                    class="bi bi-book-fill me-1"></i>Beginner</span>
+                            <span class="course-cat-tag"><i class="bi bi-translate me-1"></i>Language</span>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">English Grammar</h3>
+                            <p class="course-description">All 12 tenses, 4 conditionals, active/passive voice, and
+                                professional writing. Fix your grammar gaps and build real confidence in 90 days.</p>
+                            <div class="skill-chips">
+                                <span class="skill-chip">12 Tenses</span>
+                                <span class="skill-chip">4 Conditionals</span>
+                                <span class="skill-chip">Active/Passive</span>
+                                <span class="skill-chip">Email Writing</span>
+                                <span class="skill-chip">Vocabulary</span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="course-meta-item"><i class="bi bi-bar-chart-steps"></i><span>All
+                                        Levels</span></div>
+                                <div class="course-meta-item"><i class="bi bi-collection-fill"></i><span>1 Batch</span>
+                                </div>
+                                <div class="course-meta-item"><i
+                                        class="bi bi-patch-check-fill"></i><span>Certificate</span></div>
+                            </div>
+                            <div class="course-actions">
+                                <a href="index.html#contact" class="course-btn">Enroll Now</a>
+                                <a href="starter.html#roadmap-english" class="course-btn-outline">Roadmap</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Public Speaking -->
+                <div class="col-lg-4 col-md-6 course-item" data-category="skills"
+                    data-name="public speaking leadership communication confidence body language" data-aos="fade-up"
+                    data-aos-delay="400">
+                    <div class="course-card">
+                        <div class="course-thumb" style="background:linear-gradient(135deg,#11998e,#38ef7d);">
+                            <div class="thumb-shine"></div>
+                            <i class="bi bi-mic-fill course-thumb-icon"></i>
+                            <span class="course-badge" style="background:linear-gradient(135deg,#764ba2,#c471ed);"><i
+                                    class="bi bi-mic-fill me-1"></i>Soft Skills</span>
+                            <span class="course-cat-tag"><i class="bi bi-person-raised-hand me-1"></i>Leadership</span>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Public Speaking &amp; Leadership Skills</h3>
+                            <p class="course-description">From stage fright to confident speaker. Learn speech
+                                structure, body language, vocal delivery, and persuasive communication for any audience.
+                            </p>
+                            <div class="skill-chips">
+                                <span class="skill-chip">Stage Fright</span>
+                                <span class="skill-chip">Speech Structure</span>
+                                <span class="skill-chip">Body Language</span>
+                                <span class="skill-chip">Vocal Delivery</span>
+                                <span class="skill-chip">Leadership</span>
+                            </div>
+                            <div class="course-meta">
+                                <div class="course-meta-item"><i class="bi bi-bar-chart-steps"></i><span>All
+                                        Levels</span></div>
+                                <div class="course-meta-item"><i class="bi bi-collection-fill"></i><span>2
+                                        Batches</span></div>
+                                <div class="course-meta-item"><i
+                                        class="bi bi-patch-check-fill"></i><span>Certificate</span></div>
+                            </div>
+                            <div class="course-actions">
+                                <a href="index.html#contact" class="course-btn">Enroll Now</a>
+                                <a href="starter.html#roadmap-speaking" class="course-btn-outline">Roadmap</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /row -->
+
+            <!-- No results -->
+            <div class="no-results" id="noResults">
+                <i class="bi bi-search"></i>
+                <p>No courses found. Try a different keyword or filter.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2 data-aos="fade-up">Ready to Start Your Learning Journey?</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Join students from Bangladesh, Ghana, India &amp; Dubai &mdash;
+                get certified today.</p>
+            <a href="index.html#contact" class="cta-btn-white" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-send-fill me-2"></i>Contact Us to Enroll
+            </a>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <span class="footer-logo-text">Incipient Study</span>
+                    <p class="footer-description">Empowering learners worldwide to master programming and languages through structured, certified, live online education. Affiliated with Ghana Company &amp; Innovative IT Solutions Agency.</p>
+                    <div class="footer-social-icons">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <h5 class="footer-col-title">Courses</h5>
+                    <ul class="footer-nav-list">
+                        <li><a href="courses.html">C Programming</a></li>
+                        <li><a href="courses.html">C++ Programming</a></li>
+                        <li><a href="courses.html">Python</a></li>
+                        <li><a href="courses.html">Full Stack (Laravel)</a></li>
+                        <li><a href="courses.html">Chinese (HSK 1&amp;2)</a></li>
+                        <li><a href="courses.html">Japanese (N5)</a></li>
+                        <li><a href="courses.html">English Grammar</a></li>
+                        <li><a href="courses.html">Public Speaking</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <h5 class="footer-col-title">Quick Links</h5>
+                    <ul class="footer-nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">All Courses</a></li>
+                        <li><a href="roadmaps.html">Roadmaps</a></li>
+                        <li><a href="learn-free.html">Free Lessons</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="instructors.html">Instructors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="footer-col-title">Get Certified</h5>
+                    <div class="footer-enroll-box">
+                        <p>Complete any course and receive an official Incipient Study certificate — recognized nationally and internationally.</p>
+                        <a href="contact.html" class="btn-footer-enroll"><i class="bi bi-award-fill me-1"></i> Enroll Today</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider">
+                <p>&copy; 2026 Incipient Study. All rights reserved. | Affiliated with Ghana Company &amp; Innovative IT Solutions Agency | Developed by <a href="https://webdevhumaira.github.io/Developers-Info/" target="_blank" rel="noopener">Developers</a></p>
+            </div>
+        </div>
+    </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <script src="assets/js/shared.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+</body>
+
+</html>

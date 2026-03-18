@@ -1,0 +1,1807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Starter Lessons — Incipient Study</title>
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+
+</head>
+
+<body data-theme="light">
+        <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/+8801234567890" class="whatsapp-float" target="_blank" rel="noopener">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scroll to Top Button -->
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <i class="bi bi-mortarboard-fill" style="font-size:1.5rem;background:linear-gradient(135deg,#086A7C,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;"></i>
+                <span class="navbar-brand-text">Incipient Study</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainNav" aria-controls="navbarMainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMainNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-1">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="roadmaps.html">Roadmaps</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="learn-free.html">Learn for Free</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="instructors.html">Instructors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item dropdown theme-dropdown ms-1">
+                        <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="themeToggle">
+                            <i class="bi bi-moon-stars-fill" id="themeIcon"></i> Theme
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#" data-theme="light"><i class="bi bi-sun-fill me-2"></i>Light</a></li>
+                            <li><a class="dropdown-item" href="#" data-theme="dark"><i class="bi bi-moon-stars-fill me-2"></i>Dark</a></li>
+                            <li><a class="dropdown-item" href="#" data-theme="auto"><i class="bi bi-circle-half me-2"></i>Auto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-1"><a href="contact.html" class="btn-nav-enroll">Enroll Now</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="starter-hero">
+        <div class="floating-element floating-1"></div>
+        <div class="floating-element floating-2"></div>
+        <div class="floating-element floating-3"></div>
+
+        <div class="float-icons">
+            <div class="float-icon"><i class="bi bi-code-slash"></i></div>
+            <div class="float-icon"><i class="bi bi-translate"></i></div>
+            <div class="float-icon"><i class="bi bi-book-half"></i></div>
+            <div class="float-icon"><i class="bi bi-lightbulb-fill"></i></div>
+        </div>
+        <div class="container position-relative" style="z-index:1" data-aos="fade-up">
+        <div class="hero-breadcrumb" data-aos="fade-up">
+            <a href="index.html"><i class="bi bi-book-fill me-1"></i>Home</a>
+            <span><i class="bi bi-chevron-right"></i></span>
+            <span style="color:white;font-weight:600;">Learn for Free</span>
+        </div>
+
+            <div class="hero-badge"><i class="bi bi-stars me-1"></i> Free Starter Lessons</div>
+            <h1 class="hero-title">Learn the Essentials —<br><span>One Topic at a Time</span></h1>
+            <p class="hero-desc mb-4">Beginner-friendly lessons for every Incipient Study course. Clear explanations,
+                real code examples, and language tables — written by our instructors.</p>
+            <div class="d-flex flex-wrap gap-3">
+                <span class="hero-pill"><i class="bi bi-collection-fill"></i> 8 Courses</span>
+                <span class="hero-pill"><i class="bi bi-journal-code"></i> Programming + Languages</span>
+                <span class="hero-pill"><i class="bi bi-patch-check-fill"></i> Written by Incipient Instructors</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE WRAPPER -->
+    <div class="page-wrapper">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sb-cat">Programming</div>
+            <a class="sb-link active" href="#c-prog">
+                <span class="sb-icon" style="background:rgba(0,188,212,.14);color:#00bcd4;">C</span>
+                C Programming <span class="lb">5 Batches</span>
+            </a>
+            <a class="sb-link" href="#cpp-prog">
+                <span class="sb-icon" style="background:rgba(155,89,182,.14);color:#9b59b6;font-size:.75rem;">C++</span>
+                C++ Programming
+            </a>
+            <a class="sb-link" href="#python">
+                <span class="sb-icon" style="background:rgba(245,197,24,.14);color:#b8920a;font-size:.7rem;"><i
+                        class="bi bi-filetype-py"></i></span>
+                Python
+            </a>
+            <a class="sb-link" href="#html">
+                <span class="sb-icon" style="background:rgba(228,77,38,.14);color:#e44d26;font-size:.7rem;"><i
+                        class="bi bi-filetype-html"></i></span>
+                HTML Basics
+            </a>
+            <a class="sb-link" href="#css">
+                <span class="sb-icon" style="background:rgba(38,77,228,.14);color:#264de4;font-size:.7rem;"><i
+                        class="bi bi-filetype-css"></i></span>
+                CSS Styling
+            </a>
+            <a class="sb-link" href="#javascript">
+                <span class="sb-icon" style="background:rgba(247,223,30,.14);color:#9a7c00;font-size:.7rem;"><i
+                        class="bi bi-filetype-js"></i></span>
+                JavaScript (ES6+)
+            </a>
+            <a class="sb-link" href="#laravel">
+                <span class="sb-icon" style="background:rgba(245,82,71,.14);color:#f55247;font-size:.7rem;"><i
+                        class="bi bi-layers-half"></i></span>
+                Laravel / Full Stack <span class="lb soon">Soon</span>
+            </a>
+            <div class="sb-cat">Languages</div>
+            <a class="sb-link" href="#chinese">
+                <span class="sb-icon" style="background:rgba(192,57,43,.14);color:#c0392b;font-size:1rem;">中</span>
+                Chinese (HSK 1 &amp; 2)
+            </a>
+            <a class="sb-link" href="#japanese">
+                <span class="sb-icon" style="background:rgba(231,76,60,.14);color:#e74c3c;font-size:1rem;">日</span>
+                Japanese (N5)
+            </a>
+            <a class="sb-link" href="#english">
+                <span class="sb-icon" style="background:rgba(51,153,255,.14);color:#3399ff;font-size:.7rem;"><i
+                        class="bi bi-alphabet"></i></span>
+                English Grammar
+            </a>
+            <div class="sb-cat">Soft Skills</div>
+            <a class="sb-link" href="#speaking">
+                <span class="sb-icon" style="background:rgba(39,174,96,.14);color:#27ae60;font-size:.7rem;"><i
+                        class="bi bi-mic-fill"></i></span>
+                Public Speaking
+            </a>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="content">
+
+            <!-- ══════════════════════ C PROGRAMMING ══════════════════════ -->
+            <section id="c-prog" class="rs" data-aos="fade-up">
+                <div class="sh-row">
+                    <div class="ci" style="background:rgba(0,188,212,.12);color:#00bcd4;">C</div>
+                    <h2 class="st">C Programming</h2>
+                </div>
+                <p class="ss">A general-purpose, procedural language. The foundation of modern computing — operating
+                    systems, embedded systems, and compilers are built with C.</p>
+
+                <div class="tpills">
+                    <span class="tpill"><i class="bi bi-check2"></i> Variables &amp; Data Types</span>
+                    <span class="tpill"><i class="bi bi-check2"></i> Control Flow</span>
+                    <span class="tpill"><i class="bi bi-check2"></i> Functions</span>
+                    <span class="tpill"><i class="bi bi-check2"></i> Arrays</span>
+                    <span class="tpill"><i class="bi bi-check2"></i> Pointers</span>
+                    <span class="tpill"><i class="bi bi-check2"></i> Structures</span>
+                </div>
+
+                <div class="lb-block">
+                    <h3>1. Your First C Program</h3>
+                    <p>Every C program starts with <code>#include &lt;stdio.h&gt;</code>, which gives you access to
+                        input/output functions like <code>printf()</code>. Program execution always begins inside the
+                        <code>main()</code> function.
+                    </p>
+                    <div class="cb"><span class="ll">C</span><span class="kw">#include</span> <span
+                            class="str">&lt;stdio.h&gt;</span>
+                        <span class="cm">// Execution starts here</span>
+                        <span class="tp">int</span> <span class="fn">main</span>() {
+                        <span class="fn">printf</span>(<span class="str">"Hello, Incipient Study!\n"</span>);
+                        <span class="kw">return</span> <span class="num">0</span>;
+                        }
+                    </div>
+                    <div class="out"><span class="ol">Output</span>Hello, Incipient Study!</div>
+                    <div class="nb"><i class="bi bi-info-circle-fill"></i> The <code>\n</code> inside the string is a
+                        newline character. It moves the cursor to the next line after printing.</div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>2. Variables &amp; Data Types</h3>
+                    <p>In C, you must declare a variable's type before using it. The most common types are shown below.
+                    </p>
+                    <table class="st-table">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Size</th>
+                                <th>Example</th>
+                                <th>Stores</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>int</td>
+                                <td>4 bytes</td>
+                                <td>int age = 20;</td>
+                                <td>Whole numbers</td>
+                            </tr>
+                            <tr>
+                                <td>float</td>
+                                <td>4 bytes</td>
+                                <td>float gpa = 3.8;</td>
+                                <td>Decimal numbers (6–7 digits)</td>
+                            </tr>
+                            <tr>
+                                <td>double</td>
+                                <td>8 bytes</td>
+                                <td>double pi = 3.14159;</td>
+                                <td>Decimal numbers (15 digits)</td>
+                            </tr>
+                            <tr>
+                                <td>char</td>
+                                <td>1 byte</td>
+                                <td>char grade = 'A';</td>
+                                <td>A single character</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="cb"><span class="ll">C</span><span class="kw">#include</span> <span
+                            class="str">&lt;stdio.h&gt;</span>
+                        <span class="tp">int</span> <span class="fn">main</span>() {
+                        <span class="tp">int</span> age = <span class="num">20</span>;
+                        <span class="tp">float</span> gpa = <span class="num">3.8</span>;
+                        <span class="tp">char</span> grade = <span class="str">'A'</span>;
+
+                        <span class="fn">printf</span>(<span class="str">"Age: %d\n"</span>, age);
+                        <span class="fn">printf</span>(<span class="str">"GPA: %.1f\n"</span>, gpa);
+                        <span class="fn">printf</span>(<span class="str">"Grade: %c\n"</span>, grade);
+                        <span class="kw">return</span> <span class="num">0</span>;
+                        }
+                    </div>
+                    <div class="out"><span class="ol">Output</span>Age: 20<br>GPA: 3.8<br>Grade: A</div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>3. Control Flow — if / else / for / while</h3>
+                    <p>Control flow lets you make decisions and repeat blocks of code in your program.</p>
+                    <div class="cb"><span class="ll">C</span><span class="cm">// Decision making</span>
+                        <span class="tp">int</span> marks = <span class="num">75</span>;
+                        <span class="kw">if</span> (marks &gt;= <span class="num">80</span>) {
+                        <span class="fn">printf</span>(<span class="str">"Grade: A\n"</span>);
+                        } <span class="kw">else if</span> (marks &gt;= <span class="num">60</span>) {
+                        <span class="fn">printf</span>(<span class="str">"Grade: B\n"</span>);
+                        } <span class="kw">else</span> {
+                        <span class="fn">printf</span>(<span class="str">"Grade: C\n"</span>);
+                        }
+
+                        <span class="cm">// for loop — prints 1 to 5</span>
+                        <span class="kw">for</span> (<span class="tp">int</span> i = <span class="num">1</span>; i &lt;=
+                        <span class="num">5</span>; i++) {
+                        <span class="fn">printf</span>(<span class="str">"%d "</span>, i);
+                        }
+                    </div>
+                    <div class="out"><span class="ol">Output</span>Grade: B<br>1 2 3 4 5</div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>4. Functions</h3>
+                    <p>A function is a reusable block of code that performs a specific task. Define it once, call it
+                        anywhere. Every C program has at least one function — <code>main()</code>.</p>
+                    <div class="cb"><span class="ll">C</span><span class="tp">int</span> <span
+                            class="fn">add</span>(<span class="tp">int</span> a, <span class="tp">int</span> b) {
+                        <span class="kw">return</span> a + b;
+                        }
+
+                        <span class="tp">int</span> <span class="fn">main</span>() {
+                        <span class="tp">int</span> result = <span class="fn">add</span>(<span class="num">10</span>,
+                        <span class="num">25</span>);
+                        <span class="fn">printf</span>(<span class="str">"Sum = %d\n"</span>, result);
+                        <span class="kw">return</span> <span class="num">0</span>;
+                        }
+                    </div>
+                    <div class="out"><span class="ol">Output</span>Sum = 35</div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>5. Pointers</h3>
+                    <p>A pointer stores the <strong>memory address</strong> of another variable. Use <code>&amp;</code>
+                        to get an address and <code>*</code> to access the value at that address (dereferencing).</p>
+                    <div class="cb"><span class="ll">C</span><span class="tp">int</span> num = <span
+                            class="num">50</span>;
+                        <span class="tp">int</span> *ptr = &amp;num; <span class="cm">// ptr holds the address of
+                            num</span>
+
+                        <span class="fn">printf</span>(<span class="str">"Value: %d\n"</span>, *ptr); <span
+                            class="cm">// dereference → 50</span>
+                        <span class="fn">printf</span>(<span class="str">"Address: %p\n"</span>, ptr); <span
+                            class="cm">// prints memory address</span>
+                    </div>
+                    <div class="wb"><i class="bi bi-exclamation-triangle-fill"></i> Always initialize a pointer before
+                        using it. An uninitialized pointer points to a random memory location and can crash your
+                        program.</div>
+                </div>
+            </section>
+
+            <!-- ══════════════════════ C++ PROGRAMMING ══════════════════════ -->
+            <section id="cpp-prog" class="rs" data-aos="fade-up">
+                <div class="sh-row">
+                    <div class="ci" style="background:rgba(155,89,182,.12);color:#9b59b6;font-size:1.1rem;">C++</div>
+                    <h2 class="st">C++ Programming</h2>
+                </div>
+                <p class="ss">C++ extends C with Object-Oriented Programming (OOP), the Standard Template Library (STL),
+                    and powerful abstractions for building large-scale applications.</p>
+
+                <div class="tpills">
+                    <span class="tpill"><i class="bi bi-check2"></i> Classes &amp; Objects</span>
+                    <span class="tpill"><i class="bi bi-check2"></i> Constructors</span>
+                    <span class="tpill"><i class="bi bi-check2"></i> Inheritance</span>
+                    <span class="tpill"><i class="bi bi-check2"></i> Encapsulation</span>
+                    <span class="tpill"><i class="bi bi-check2"></i> STL Vectors</span>
+                </div>
+
+                <div class="lb-block">
+                    <h3>1. From C to C++ — Key Differences</h3>
+                    <p>C++ uses <code>cout</code> for output and <code>cin</code> for input instead of
+                        <code>printf/scanf</code>. Include <code>&lt;iostream&gt;</code> and use the <code>std</code>
+                        namespace.
+                    </p>
+                    <div class="cb"><span class="ll">C++</span><span class="kw">#include</span> <span
+                            class="str">&lt;iostream&gt;</span>
+                        <span class="kw">using namespace</span> std;
+
+                        <span class="tp">int</span> <span class="fn">main</span>() {
+                        <span class="tp">int</span> age;
+                        cout <span class="op">&lt;&lt;</span> <span class="str">"Enter your age: "</span>;
+                        cin <span class="op">&gt;&gt;</span> age;
+                        cout <span class="op">&lt;&lt;</span> <span class="str">"You are "</span> <span
+                            class="op">&lt;&lt;</span> age <span class="op">&lt;&lt;</span> <span class="str">" years
+                            old."</span> <span class="op">&lt;&lt;</span> endl;
+                        <span class="kw">return</span> <span class="num">0</span>;
+                        }
+                    </div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>2. Classes &amp; Objects</h3>
+                    <p>A <strong>class</strong> is a blueprint. An <strong>object</strong> is an instance built from
+                        that blueprint. Classes bundle data (attributes) and behavior (methods) — this is the core idea
+                        of OOP.</p>
+                    <div class="cb"><span class="ll">C++</span><span class="kw">class</span> <span
+                            class="tp">Student</span> {
+                        <span class="kw">public</span>:
+                        <span class="tp">string</span> name;
+                        <span class="tp">int</span> age;
+
+                        <span class="tp">void</span> <span class="fn">introduce</span>() {
+                        cout <span class="op">&lt;&lt;</span> <span class="str">"Hi, I am "</span> <span
+                            class="op">&lt;&lt;</span> name <span class="op">&lt;&lt;</span> <span class="str">", age
+                            "</span> <span class="op">&lt;&lt;</span> age <span class="op">&lt;&lt;</span> endl;
+                        }
+                        };
+
+                        <span class="tp">int</span> <span class="fn">main</span>() {
+                        <span class="tp">Student</span> s1; <span class="cm">// create an object</span>
+                        s1.name = <span class="str">"Rafi"</span>;
+                        s1.age = <span class="num">21</span>;
+                        s1.<span class="fn">introduce</span>();
+                        <span class="kw">return</span> <span class="num">0</span>;
+                        }
+                    </div>
+                    <div class="out"><span class="ol">Output</span>Hi, I am Rafi, age 21</div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>3. Inheritance</h3>
+                    <p>A <strong>child class</strong> inherits all properties and methods of a <strong>parent
+                            class</strong>, while adding its own unique features. Use a colon <code>:</code> to inherit.
+                    </p>
+                    <div class="cb"><span class="ll">C++</span><span class="kw">class</span> <span
+                            class="tp">Animal</span> {
+                        <span class="kw">public</span>:
+                        <span class="tp">void</span> <span class="fn">eat</span>() { cout <span
+                            class="op">&lt;&lt;</span> <span class="str">"Eating..."</span> <span
+                            class="op">&lt;&lt;</span> endl; }
+                        };
+
+                        <span class="kw">class</span> <span class="tp">Dog</span> : <span class="kw">public</span> <span
+                            class="tp">Animal</span> {
+                        <span class="kw">public</span>:
+                        <span class="tp">void</span> <span class="fn">bark</span>() { cout <span
+                            class="op">&lt;&lt;</span> <span class="str">"Woof!"</span> <span class="op">&lt;&lt;</span>
+                        endl; }
+                        };
+
+                        <span class="tp">int</span> <span class="fn">main</span>() {
+                        <span class="tp">Dog</span> d;
+                        d.<span class="fn">eat</span>(); <span class="cm">// inherited from Animal</span>
+                        d.<span class="fn">bark</span>(); <span class="cm">// Dog's own method</span>
+                        }
+                    </div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>4. STL — Vectors</h3>
+                    <p>The Standard Template Library (STL) provides ready-to-use data structures. A <code>vector</code>
+                        is a dynamic array that grows and shrinks at runtime.</p>
+                    <div class="cb"><span class="ll">C++</span><span class="kw">#include</span> <span
+                            class="str">&lt;vector&gt;</span>
+
+                        <span class="tp">vector</span><span class="op">&lt;</span><span class="tp">int</span><span
+                            class="op">&gt;</span> scores = {<span class="num">85</span>, <span class="num">92</span>,
+                        <span class="num">78</span>, <span class="num">95</span>};
+                        scores.<span class="fn">push_back</span>(<span class="num">88</span>);
+
+                        <span class="kw">for</span> (<span class="tp">int</span> s : scores) { <span class="cm">//
+                            range-based for loop (C++11)</span>
+                        cout <span class="op">&lt;&lt;</span> s <span class="op">&lt;&lt;</span> <span class="str">"
+                            "</span>;
+                        }
+                    </div>
+                    <div class="out"><span class="ol">Output</span>85 92 78 95 88</div>
+                </div>
+            </section>
+
+            <!-- ══════════════════════ PYTHON ══════════════════════ -->
+            <section id="python" class="rs" data-aos="fade-up">
+                <div class="sh-row">
+                    <div class="ci" style="background:rgba(245,197,24,.12);color:#b8920a;font-size:1.4rem;"><i
+                            class="bi bi-filetype-py"></i></div>
+                    <h2 class="st">Python</h2>
+                </div>
+                <p class="ss">Python is famous for its readable syntax and versatility — from web scripting to data
+                    science. It is one of the best first languages for beginners.</p>
+
+                <div class="tpills">
+                    <span class="tpill"><i class="bi bi-check2"></i> Syntax &amp; Variables</span>
+                    <span class="tpill"><i class="bi bi-check2"></i> Lists &amp; Dicts</span>
+                    <span class="tpill"><i class="bi bi-check2"></i> Functions</span>
+                    <span class="tpill"><i class="bi bi-check2"></i> OOP</span>
+                    <span class="tpill"><i class="bi bi-check2"></i> File Handling</span>
+                </div>
+
+                <div class="lb-block">
+                    <h3>1. Variables &amp; Print</h3>
+                    <p>Python does not require type declarations. Assign a value and Python figures out the type
+                        automatically.</p>
+                    <div class="cb"><span class="ll">Python</span>name = <span class="str">"Incipient"</span> <span
+                            class="cm"># str</span>
+                        batch = <span class="num">5</span> <span class="cm"># int</span>
+                        rating = <span class="num">4.9</span> <span class="cm"># float</span>
+                        active = <span class="kw">True</span> <span class="cm"># bool</span>
+
+                        <span class="fn">print</span>(<span class="str">f"Platform: {name}, Batch: {batch}"</span>)
+                        <span class="fn">print</span>(<span class="str">f"Rating: {rating} | Active: {active}"</span>)
+                    </div>
+                    <div class="out"><span class="ol">Output</span>Platform: Incipient, Batch: 5<br>Rating: 4.9 |
+                        Active: True</div>
+                    <div class="nb"><i class="bi bi-info-circle-fill"></i> The <code>f"..."</code> syntax is called an
+                        f-string. It lets you embed variable values inside a string using <code>{}</code> — no
+                        concatenation needed.</div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>2. Lists &amp; Dictionaries</h3>
+                    <p>A <strong>list</strong> is an ordered, changeable collection. A <strong>dictionary</strong>
+                        stores key-value pairs — like a real-world dictionary.</p>
+                    <div class="cb"><span class="ll">Python</span><span class="cm"># List — ordered collection</span>
+                        courses = [<span class="str">"C"</span>, <span class="str">"Python"</span>, <span
+                            class="str">"Japanese"</span>]
+                        courses.<span class="fn">append</span>(<span class="str">"Laravel"</span>)
+                        <span class="fn">print</span>(courses[<span class="num">0</span>]) <span class="cm"># C (index
+                            starts at 0)</span>
+
+                        <span class="cm"># Dictionary — key-value pairs</span>
+                        student = {<span class="str">"name"</span>: <span class="str">"Sadia"</span>, <span
+                            class="str">"batch"</span>: <span class="num">3</span>, <span class="str">"score"</span>:
+                        <span class="num">92</span>}
+                        <span class="fn">print</span>(student[<span class="str">"name"</span>]) <span class="cm">#
+                            Sadia</span>
+                        student[<span class="str">"score"</span>] = <span class="num">95</span> <span class="cm">#
+                            update a value</span>
+                    </div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>3. Functions &amp; Loops</h3>
+                    <div class="cb"><span class="ll">Python</span><span class="kw">def</span> <span
+                            class="fn">greet</span>(name):
+                        <span class="kw">return</span> <span class="str">f"Hello, {name}!"</span>
+
+                        <span class="fn">print</span>(<span class="fn">greet</span>(<span class="str">"Rafi"</span>))
+
+                        scores = [<span class="num">85</span>, <span class="num">90</span>, <span class="num">78</span>,
+                        <span class="num">95</span>]
+                        <span class="kw">for</span> s <span class="kw">in</span> scores:
+                        <span class="kw">if</span> s &gt;= <span class="num">90</span>:
+                        <span class="fn">print</span>(<span class="str">f"{s} — Excellent!"</span>)
+                    </div>
+                    <div class="out"><span class="ol">Output</span>Hello, Rafi!<br>90 — Excellent!<br>95 — Excellent!
+                    </div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>4. Classes in Python</h3>
+                    <div class="cb"><span class="ll">Python</span><span class="kw">class</span> <span
+                            class="tp">Student</span>:
+                        <span class="kw">def</span> <span class="fn">__init__</span>(self, name, batch): <span
+                            class="cm"># constructor</span>
+                        self.name = name
+                        self.batch = batch
+
+                        <span class="kw">def</span> <span class="fn">introduce</span>(self):
+                        <span class="fn">print</span>(<span class="str">f"I am {self.name}, Batch {self.batch}"</span>)
+
+                        s1 = <span class="tp">Student</span>(<span class="str">"Lina"</span>, <span
+                            class="num">5</span>)
+                        s1.<span class="fn">introduce</span>()
+                    </div>
+                    <div class="out"><span class="ol">Output</span>I am Lina, Batch 5</div>
+                </div>
+            </section>
+
+            <!-- ══════════════════════ HTML ══════════════════════ -->
+            <section id="html" class="rs" data-aos="fade-up">
+                <div class="sh-row">
+                    <div class="ci" style="background:rgba(228,77,38,.12);color:#e44d26;font-size:1.4rem;"><i
+                            class="bi bi-filetype-html"></i></div>
+                    <h2 class="st">HTML — HyperText Markup Language</h2>
+                </div>
+                <p class="ss">HTML defines the structure of every web page. It is not a programming language — it is a
+                    markup language built from tags that a browser reads and renders.</p>
+
+                <div class="lb-block">
+                    <h3>1. Basic HTML Document Structure</h3>
+                    <p>Every HTML file follows a standard skeleton. The browser reads it from top to bottom.</p>
+                    <div class="cb"><span class="ll">HTML</span><span class="cm">&lt;!-- Tells the browser: this is
+                            HTML5 --&gt;</span>
+                        <span class="kw">&lt;!DOCTYPE html&gt;</span>
+                        <span class="kw">&lt;html</span> <span class="fn">lang</span>=<span class="str">"en"</span><span
+                            class="kw">&gt;</span>
+
+                        <span class="kw">&lt;head&gt;</span>
+                        <span class="kw">&lt;meta</span> <span class="fn">charset</span>=<span
+                            class="str">"UTF-8"</span><span class="kw">&gt;</span>
+                        <span class="kw">&lt;title&gt;</span>My First Page<span class="kw">&lt;/title&gt;</span> <span
+                            class="cm">&lt;!-- shown in browser tab --&gt;</span>
+                        <span class="kw">&lt;/head&gt;</span>
+
+                        <span class="kw">&lt;body&gt;</span>
+                        <span class="kw">&lt;h1&gt;</span>Hello, World!<span class="kw">&lt;/h1&gt;</span>
+                        <span class="kw">&lt;p&gt;</span>This is my first paragraph.<span class="kw">&lt;/p&gt;</span>
+                        <span class="kw">&lt;/body&gt;</span>
+
+                        <span class="kw">&lt;/html&gt;</span>
+                    </div>
+                    <div class="nb"><i class="bi bi-info-circle-fill"></i> The <strong>&lt;head&gt;</strong> section
+                        contains invisible settings (title, fonts, styles). The <strong>&lt;body&gt;</strong> section
+                        contains everything the user actually sees on the page.</div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>2. Most Common HTML Tags</h3>
+                    <table class="st-table">
+                        <thead>
+                            <tr>
+                                <th>Tag</th>
+                                <th>Purpose</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>&lt;h1&gt;–&lt;h6&gt;</td>
+                                <td>Headings (h1 = largest)</td>
+                                <td>&lt;h2&gt;Section Title&lt;/h2&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;p&gt;</td>
+                                <td>Paragraph of text</td>
+                                <td>&lt;p&gt;Some text here.&lt;/p&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;a&gt;</td>
+                                <td>Hyperlink</td>
+                                <td>&lt;a href="page.html"&gt;Click here&lt;/a&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;img&gt;</td>
+                                <td>Display an image</td>
+                                <td>&lt;img src="logo.png" alt="Logo"&gt;</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;ul&gt; / &lt;ol&gt;</td>
+                                <td>Unordered / Ordered list</td>
+                                <td>&lt;li&gt;Item&lt;/li&gt; inside both</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;div&gt;</td>
+                                <td>Generic block container</td>
+                                <td>Used for grouping &amp; layout</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;span&gt;</td>
+                                <td>Generic inline container</td>
+                                <td>Used to style part of a text</td>
+                            </tr>
+                            <tr>
+                                <td>&lt;input&gt;</td>
+                                <td>Form input field</td>
+                                <td>&lt;input type="text" placeholder="Name"&gt;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>3. Links &amp; Images</h3>
+                    <div class="cb"><span class="ll">HTML</span><span class="cm">&lt;!-- Link: opens in the same tab
+                            --&gt;</span>
+                        <span class="kw">&lt;a</span> <span class="fn">href</span>=<span
+                            class="str">"courses.html"</span><span class="kw">&gt;</span>View Courses<span
+                            class="kw">&lt;/a&gt;</span>
+
+                        <span class="cm">&lt;!-- Link: opens in a NEW tab --&gt;</span>
+                        <span class="kw">&lt;a</span> <span class="fn">href</span>=<span
+                            class="str">"https://incipient.com"</span> <span class="fn">target</span>=<span
+                            class="str">"_blank"</span><span class="kw">&gt;</span>Visit Website<span
+                            class="kw">&lt;/a&gt;</span>
+
+                        <span class="cm">&lt;!-- Image: always include alt text --&gt;</span>
+                        <span class="kw">&lt;img</span> <span class="fn">src</span>=<span
+                            class="str">"banner.jpg"</span> <span class="fn">alt</span>=<span class="str">"Course
+                            Banner"</span> <span class="fn">width</span>=<span class="str">"600"</span><span
+                            class="kw">&gt;</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══════════════════════ CSS ══════════════════════ -->
+            <section id="css" class="rs" data-aos="fade-up">
+                <div class="sh-row">
+                    <div class="ci" style="background:rgba(38,77,228,.12);color:#264de4;font-size:1.4rem;"><i
+                            class="bi bi-filetype-css"></i></div>
+                    <h2 class="st">CSS — Cascading Style Sheets</h2>
+                </div>
+                <p class="ss">CSS controls how HTML elements look — colors, fonts, layout, spacing, and animations. HTML
+                    gives you the skeleton; CSS makes it beautiful.</p>
+
+                <div class="lb-block">
+                    <h3>1. Selectors, Properties &amp; Values</h3>
+                    <p>A CSS rule has three parts: a <strong>selector</strong> (which element to target), a
+                        <strong>property</strong> (what to change), and a <strong>value</strong> (how to change it).
+                    </p>
+                    <div class="cb"><span class="ll">CSS</span><span class="cm">/* Select by tag name */</span>
+                        <span class="fn">p</span> {
+                        <span class="tp">color</span>: <span class="str">#2c3e50</span>;
+                        <span class="tp">font-size</span>: <span class="num">16px</span>;
+                        <span class="tp">line-height</span>: <span class="num">1.6</span>;
+                        }
+
+                        <span class="cm">/* Select by class — prefix with a dot */</span>
+                        <span class="fn">.card</span> {
+                        <span class="tp">background</span>: <span class="str">white</span>;
+                        <span class="tp">border-radius</span>: <span class="num">12px</span>;
+                        <span class="tp">padding</span>: <span class="num">1.5rem</span>;
+                        <span class="tp">box-shadow</span>: <span class="num">0 4px 20px</span> <span
+                            class="str">rgba(0,0,0,0.1)</span>;
+                        }
+
+                        <span class="cm">/* Select by ID — prefix with # */</span>
+                        <span class="fn">#hero</span> {
+                        <span class="tp">background</span>: <span class="str">linear-gradient(135deg, #086A7C,
+                            #764ba2)</span>;
+                        <span class="tp">color</span>: <span class="str">white</span>;
+                        }
+                    </div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>2. The Box Model</h3>
+                    <p>Every HTML element is a rectangular box. The box model describes the layers around the content:
+                        padding (inner space), border, and margin (outer space).</p>
+                    <div class="cb"><span class="ll">CSS</span><span class="fn">.box</span> {
+                        <span class="tp">width</span>: <span class="num">200px</span>;
+                        <span class="tp">padding</span>: <span class="num">20px</span>; <span class="cm">/* space inside
+                            the border */</span>
+                        <span class="tp">border</span>: <span class="num">2px solid</span> <span
+                            class="str">#086A7C</span>;
+                        <span class="tp">margin</span>: <span class="num">30px</span>; <span class="cm">/* space outside
+                            the border */</span>
+                        }
+                        <span class="cm">/* Total width = 200 + 20*2 + 2*2 = 244px */</span>
+                    </div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>3. Flexbox — The Modern Layout Tool</h3>
+                    <p>Flexbox makes it easy to align and distribute elements inside a container, both horizontally and
+                        vertically — without using floats or hacks.</p>
+                    <div class="cb"><span class="ll">CSS</span><span class="fn">.navbar</span> {
+                        <span class="tp">display</span>: <span class="str">flex</span>;
+                        <span class="tp">justify-content</span>: <span class="str">space-between</span>; <span
+                            class="cm">/* push items to each end */</span>
+                        <span class="tp">align-items</span>: <span class="str">center</span>; <span class="cm">/*
+                            vertically center */</span>
+                        <span class="tp">gap</span>: <span class="num">1rem</span>;
+                        <span class="tp">padding</span>: <span class="num">1rem 2rem</span>;
+                        }
+                    </div>
+                    <table class="st-table">
+                        <thead>
+                            <tr>
+                                <th>Property</th>
+                                <th>Common Values</th>
+                                <th>Effect</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>justify-content</td>
+                                <td>flex-start, center, space-between</td>
+                                <td>Controls horizontal alignment</td>
+                            </tr>
+                            <tr>
+                                <td>align-items</td>
+                                <td>flex-start, center, flex-end</td>
+                                <td>Controls vertical alignment</td>
+                            </tr>
+                            <tr>
+                                <td>flex-direction</td>
+                                <td>row, column</td>
+                                <td>Sets the main axis direction</td>
+                            </tr>
+                            <tr>
+                                <td>gap</td>
+                                <td>10px, 1rem</td>
+                                <td>Space between flex items</td>
+                            </tr>
+                            <tr>
+                                <td>flex-wrap</td>
+                                <td>wrap, nowrap</td>
+                                <td>Allow items to wrap to next line</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ══════════════════════ JAVASCRIPT ══════════════════════ -->
+            <section id="javascript" class="rs" data-aos="fade-up">
+                <div class="sh-row">
+                    <div class="ci" style="background:rgba(247,223,30,.15);color:#9a7c00;font-size:1.4rem;"><i
+                            class="bi bi-filetype-js"></i></div>
+                    <h2 class="st">Modern JavaScript (ES6+)</h2>
+                </div>
+                <p class="ss">JavaScript makes web pages interactive — handling clicks, fetching data from servers, and
+                    updating the UI without reloading the page.</p>
+
+                <div class="tpills">
+                    <span class="tpill"><i class="bi bi-check2"></i> let / const</span>
+                    <span class="tpill"><i class="bi bi-check2"></i> Arrow Functions</span>
+                    <span class="tpill"><i class="bi bi-check2"></i> DOM Manipulation</span>
+                    <span class="tpill"><i class="bi bi-check2"></i> Destructuring</span>
+                    <span class="tpill"><i class="bi bi-check2"></i> Async / Await</span>
+                </div>
+
+                <div class="lb-block">
+                    <h3>1. Variables — let, const, var</h3>
+                    <p>In modern JavaScript, use <code>const</code> for values that never change and <code>let</code>
+                        for values that might change. Avoid <code>var</code> in new code.</p>
+                    <div class="cb"><span class="ll">JavaScript</span><span class="kw">const</span> PI = <span
+                            class="num">3.14159</span>; <span class="cm">// cannot be reassigned</span>
+                        <span class="kw">let</span> score = <span class="num">0</span>; <span class="cm">// can change
+                            later</span>
+                        score = <span class="num">95</span>;
+
+                        <span class="cm">// Template literal (ES6) — use backticks</span>
+                        <span class="kw">const</span> name = <span class="str">"Lina"</span>;
+                        console.<span class="fn">log</span>(<span class="str">`Hello, ${name}! Score: ${score}`</span>);
+                    </div>
+                    <div class="out"><span class="ol">Console</span>Hello, Lina! Score: 95</div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>2. Arrow Functions</h3>
+                    <p>Arrow functions are a shorter syntax for writing functions, introduced in ES6. They use the
+                        <code>=&gt;</code> symbol.
+                    </p>
+                    <div class="cb"><span class="ll">JavaScript</span><span class="cm">// Traditional function</span>
+                        <span class="kw">function</span> <span class="fn">add</span>(a, b) { <span
+                            class="kw">return</span> a + b; }
+
+                        <span class="cm">// Arrow function — same result, cleaner syntax</span>
+                        <span class="kw">const</span> <span class="fn">add</span> = (a, b) <span class="op">=&gt;</span>
+                        a + b;
+
+                        <span class="cm">// Arrow with a full body</span>
+                        <span class="kw">const</span> <span class="fn">greet</span> = (name) <span
+                            class="op">=&gt;</span> {
+                        <span class="kw">const</span> msg = <span class="str">`Hi, ${name}!`</span>;
+                        <span class="kw">return</span> msg;
+                        };
+                        console.<span class="fn">log</span>(<span class="fn">greet</span>(<span
+                            class="str">"Rafi"</span>));
+                    </div>
+                    <div class="out"><span class="ol">Console</span>Hi, Rafi!</div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>3. DOM Manipulation</h3>
+                    <p>The DOM (Document Object Model) represents the HTML page as a tree of objects. JavaScript can
+                        select, modify, and react to any element on the page.</p>
+                    <div class="cb"><span class="ll">JavaScript</span><span class="cm">// Select elements</span>
+                        <span class="kw">const</span> btn = document.<span class="fn">querySelector</span>(<span
+                            class="str">"#myBtn"</span>);
+                        <span class="kw">const</span> title = document.<span class="fn">querySelector</span>(<span
+                            class="str">"h1"</span>);
+
+                        <span class="cm">// Respond to a click event</span>
+                        btn.<span class="fn">addEventListener</span>(<span class="str">"click"</span>, () <span
+                            class="op">=&gt;</span> {
+                        title.textContent = <span class="str">"Button was clicked!"</span>;
+                        title.style.color = <span class="str">"#086A7C"</span>;
+                        });
+                    </div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>4. Async / Await &amp; Fetch</h3>
+                    <p>JavaScript is asynchronous — fetching data from a server takes time. <code>async/await</code>
+                        lets you write asynchronous code that reads like normal, step-by-step code.</p>
+                    <div class="cb"><span class="ll">JavaScript</span><span class="kw">const</span> <span
+                            class="fn">getData</span> = <span class="kw">async</span> () <span class="op">=&gt;</span> {
+                        <span class="kw">try</span> {
+                        <span class="kw">const</span> response = <span class="kw">await</span> <span
+                            class="fn">fetch</span>(<span class="str">"https://api.example.com/courses"</span>);
+                        <span class="kw">const</span> data = <span class="kw">await</span> response.<span
+                            class="fn">json</span>();
+                        console.<span class="fn">log</span>(data);
+                        } <span class="kw">catch</span> (err) {
+                        console.<span class="fn">log</span>(<span class="str">"Error:"</span>, err);
+                        }
+                        };
+                        <span class="fn">getData</span>();
+                    </div>
+                    <div class="nb"><i class="bi bi-info-circle-fill"></i> <code>await</code> pauses the function until
+                        the Promise resolves. Always wrap async calls in <code>try/catch</code> to handle errors
+                        gracefully.</div>
+                </div>
+            </section>
+
+            <!-- ══════════════════════ LARAVEL ══════════════════════ -->
+            <section id="laravel" class="rs" data-aos="fade-up">
+                <div class="sh-row">
+                    <div class="ci" style="background:rgba(245,82,71,.12);color:#f55247;font-size:1.4rem;"><i
+                            class="bi bi-layers-half"></i></div>
+                    <h2 class="st">Full Stack Development — Laravel</h2>
+                </div>
+
+                <div class="ub">
+                    <i class="bi bi-clock-history"></i>
+                    <div>
+                        <strong style="display:block;margin-bottom:.3rem;">Course Launching Soon!</strong>
+                        <span style="color:var(--text-muted);font-size:.88rem;">The free introductory workshop has been
+                            completed. The full course is coming soon. These concept notes will help you get a head
+                            start.</span>
+                    </div>
+                </div>
+
+                <div class="lb-block">
+                    <h3>1. What is Laravel?</h3>
+                    <p>Laravel is a PHP framework that follows the <strong>MVC (Model-View-Controller)</strong>
+                        architectural pattern. It makes building web applications faster and more organized by providing
+                        built-in tools for routing, database access, authentication, and more.</p>
+                    <div class="rh">
+                        <strong>The MVC Pattern:</strong><br><br>
+                        <strong>Model</strong> — Handles all database logic. It defines what data to retrieve, save, or
+                        update. Think of it as the "data layer."<br><br>
+                        <strong>View</strong> — Handles what the user sees. In Laravel, views are HTML templates powered
+                        by the <strong>Blade</strong> engine.<br><br>
+                        <strong>Controller</strong> — The bridge between Model and View. It receives an HTTP request,
+                        asks the Model for data, and returns a View as the response.
+                    </div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>2. Basic Routing</h3>
+                    <p>Routes are defined in <code>routes/web.php</code>. A route maps a URL path to an action — either
+                        a closure or a controller method.</p>
+                    <div class="cb"><span class="ll">PHP (Laravel)</span><span class="cm">// Return a plain
+                            string</span>
+                        <span class="tp">Route</span>::<span class="fn">get</span>(<span class="str">'/'</span>, <span
+                            class="kw">function</span>() {
+                        <span class="kw">return</span> <span class="str">'Welcome to Incipient Study!'</span>;
+                        });
+
+                        <span class="cm">// Return a Blade view</span>
+                        <span class="tp">Route</span>::<span class="fn">get</span>(<span class="str">'/courses'</span>,
+                        <span class="kw">function</span>() {
+                        <span class="kw">return</span> <span class="fn">view</span>(<span class="str">'courses'</span>);
+                        });
+
+                        <span class="cm">// Route with a URL parameter</span>
+                        <span class="tp">Route</span>::<span class="fn">get</span>(<span
+                            class="str">'/course/{id}'</span>, [<span class="tp">CourseController</span>::<span
+                            class="kw">class</span>, <span class="str">'show'</span>]);
+                    </div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>3. Blade Templating</h3>
+                    <p>Blade is Laravel's templating engine. It lets you write PHP logic inside HTML views using clean,
+                        readable directives.</p>
+                    <div class="cb"><span class="ll">Blade</span><span class="cm">{{-- Display a variable --}}</span>
+                        <span class="kw">&lt;h1&gt;</span>{{ $title }}<span class="kw">&lt;/h1&gt;</span>
+
+                        <span class="cm">{{-- Loop through a collection --}}</span>
+                        <span class="kw">@foreach</span>($courses <span class="kw">as</span> $course)
+                        <span class="kw">&lt;div&gt;</span>{{ $course-&gt;name }}<span class="kw">&lt;/div&gt;</span>
+                        <span class="kw">@endforeach</span>
+
+                        <span class="cm">{{-- Conditional rendering --}}</span>
+                        <span class="kw">@if</span>(auth()-&gt;<span class="fn">check</span>())
+                        <span class="str">&lt;span&gt;</span>Welcome, {{ auth()-&gt;user()-&gt;name }}<span
+                            class="str">&lt;/span&gt;</span>
+                        <span class="kw">@endif</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══════════════════════ CHINESE ══════════════════════ -->
+            <section id="chinese" class="rs" data-aos="fade-up">
+                <div class="sh-row">
+                    <div class="ci"
+                        style="background:rgba(192,57,43,.12);color:#c0392b;font-size:1.7rem;font-family:'Ubuntu',sans-serif;">
+                        中</div>
+                    <h2 class="st">Chinese Language — HSK 1 &amp; 2</h2>
+                </div>
+                <p class="ss">Mandarin Chinese uses Pinyin (a romanization system) for pronunciation and Hanzi
+                    characters for writing. HSK 1 covers 150 core words; HSK 2 expands to 300.</p>
+
+                <div class="lb-block">
+                    <h3>1. The Four Tones of Mandarin</h3>
+                    <p>Mandarin is a tonal language. The same syllable said with a different tone has a completely
+                        different meaning. There are 4 tones plus a neutral tone.</p>
+                    <table class="vt">
+                        <thead>
+                            <tr>
+                                <th>Tone</th>
+                                <th>Mark</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                                <th>Meaning</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1st (−)</td>
+                                <td>ā</td>
+                                <td>High, flat, sustained</td>
+                                <td>mā (妈)</td>
+                                <td>Mother</td>
+                            </tr>
+                            <tr>
+                                <td>2nd (↗)</td>
+                                <td>á</td>
+                                <td>Rising, like a question</td>
+                                <td>má (麻)</td>
+                                <td>Hemp / Numb</td>
+                            </tr>
+                            <tr>
+                                <td>3rd (∨)</td>
+                                <td>ǎ</td>
+                                <td>Dips low then rises</td>
+                                <td>mǎ (马)</td>
+                                <td>Horse</td>
+                            </tr>
+                            <tr>
+                                <td>4th (↘)</td>
+                                <td>à</td>
+                                <td>Sharp, falling</td>
+                                <td>mà (骂)</td>
+                                <td>To scold</td>
+                            </tr>
+                            <tr>
+                                <td>Neutral (·)</td>
+                                <td>a</td>
+                                <td>Short, unstressed</td>
+                                <td>ma (吗)</td>
+                                <td>Question particle</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="wb"><i class="bi bi-exclamation-triangle-fill"></i> Tones are critical. Saying the wrong
+                        tone can completely change the meaning. Practice each tone out loud until it feels natural.
+                    </div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>2. Essential HSK 1 Vocabulary</h3>
+                    <table class="vt">
+                        <thead>
+                            <tr>
+                                <th>Hanzi</th>
+                                <th>Pinyin</th>
+                                <th>English</th>
+                                <th>Hanzi</th>
+                                <th>Pinyin</th>
+                                <th>English</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>你好</td>
+                                <td>nǐ hǎo</td>
+                                <td>Hello</td>
+                                <td>谢谢</td>
+                                <td>xièxie</td>
+                                <td>Thank you</td>
+                            </tr>
+                            <tr>
+                                <td>再见</td>
+                                <td>zàijiàn</td>
+                                <td>Goodbye</td>
+                                <td>对不起</td>
+                                <td>duìbuqǐ</td>
+                                <td>Sorry</td>
+                            </tr>
+                            <tr>
+                                <td>我</td>
+                                <td>wǒ</td>
+                                <td>I / Me</td>
+                                <td>你</td>
+                                <td>nǐ</td>
+                                <td>You</td>
+                            </tr>
+                            <tr>
+                                <td>他 / 她</td>
+                                <td>tā</td>
+                                <td>He / She</td>
+                                <td>我们</td>
+                                <td>wǒmen</td>
+                                <td>We / Us</td>
+                            </tr>
+                            <tr>
+                                <td>是</td>
+                                <td>shì</td>
+                                <td>To be (is/am/are)</td>
+                                <td>不</td>
+                                <td>bù</td>
+                                <td>No / Not</td>
+                            </tr>
+                            <tr>
+                                <td>有</td>
+                                <td>yǒu</td>
+                                <td>To have</td>
+                                <td>没有</td>
+                                <td>méiyǒu</td>
+                                <td>Don't have</td>
+                            </tr>
+                            <tr>
+                                <td>吃</td>
+                                <td>chī</td>
+                                <td>To eat</td>
+                                <td>喝</td>
+                                <td>hē</td>
+                                <td>To drink</td>
+                            </tr>
+                            <tr>
+                                <td>去</td>
+                                <td>qù</td>
+                                <td>To go</td>
+                                <td>来</td>
+                                <td>lái</td>
+                                <td>To come</td>
+                            </tr>
+                            <tr>
+                                <td>学生</td>
+                                <td>xuésheng</td>
+                                <td>Student</td>
+                                <td>老师</td>
+                                <td>lǎoshī</td>
+                                <td>Teacher</td>
+                            </tr>
+                            <tr>
+                                <td>今天</td>
+                                <td>jīntiān</td>
+                                <td>Today</td>
+                                <td>明天</td>
+                                <td>míngtiān</td>
+                                <td>Tomorrow</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>3. Core Sentence Patterns</h3>
+                    <p>Chinese sentences follow <strong>Subject + Verb + Object</strong> order, similar to English. The
+                        verb <strong>是 (shì)</strong> connects a subject to a noun description.</p>
+                    <div class="rh">
+                        <strong>Pattern 1: Subject + 是 + Noun</strong><br>
+                        我是学生。(Wǒ shì xuésheng.) — I am a student.<br><br>
+                        <strong>Pattern 2: Subject + 有 + Object</strong><br>
+                        我有一本书。(Wǒ yǒu yī běn shū.) — I have a book.<br><br>
+                        <strong>Pattern 3: Negation with 不</strong><br>
+                        我不喝茶。(Wǒ bù hē chá.) — I don't drink tea.<br><br>
+                        <strong>Pattern 4: Yes/No Question with 吗</strong><br>
+                        你是学生吗？(Nǐ shì xuésheng ma?) — Are you a student?
+                    </div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>4. Numbers 1–10</h3>
+                    <table class="vt">
+                        <thead>
+                            <tr>
+                                <th>一</th>
+                                <th>二</th>
+                                <th>三</th>
+                                <th>四</th>
+                                <th>五</th>
+                                <th>六</th>
+                                <th>七</th>
+                                <th>八</th>
+                                <th>九</th>
+                                <th>十</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>yī</td>
+                                <td>èr</td>
+                                <td>sān</td>
+                                <td>sì</td>
+                                <td>wǔ</td>
+                                <td>liù</td>
+                                <td>qī</td>
+                                <td>bā</td>
+                                <td>jiǔ</td>
+                                <td>shí</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ══════════════════════ JAPANESE ══════════════════════ -->
+            <section id="japanese" class="rs" data-aos="fade-up">
+                <div class="sh-row">
+                    <div class="ci"
+                        style="background:rgba(231,76,60,.12);color:#e74c3c;font-size:1.7rem;font-family:'Ubuntu',sans-serif;">
+                        日</div>
+                    <h2 class="st">Japanese Language — JLPT N5</h2>
+                </div>
+                <p class="ss">Japanese uses three scripts: Hiragana (native sounds), Katakana (foreign words), and Kanji
+                    (complex characters). N5 is the absolute beginner level of JLPT.</p>
+
+                <div class="lb-block">
+                    <h3>1. The Hiragana Chart (46 Basic Characters)</h3>
+                    <p>Hiragana is the first script you must master. Every syllable in Japanese can be written in
+                        Hiragana. Hover over each cell to highlight it.</p>
+                    <div class="kana-grid">
+                        <div class="kana-cell"><span class="kana-c">あ</span><span class="kana-r">a</span></div>
+                        <div class="kana-cell"><span class="kana-c">い</span><span class="kana-r">i</span></div>
+                        <div class="kana-cell"><span class="kana-c">う</span><span class="kana-r">u</span></div>
+                        <div class="kana-cell"><span class="kana-c">え</span><span class="kana-r">e</span></div>
+                        <div class="kana-cell"><span class="kana-c">お</span><span class="kana-r">o</span></div>
+                        <div class="kana-cell"><span class="kana-c">か</span><span class="kana-r">ka</span></div>
+                        <div class="kana-cell"><span class="kana-c">き</span><span class="kana-r">ki</span></div>
+                        <div class="kana-cell"><span class="kana-c">く</span><span class="kana-r">ku</span></div>
+                        <div class="kana-cell"><span class="kana-c">け</span><span class="kana-r">ke</span></div>
+                        <div class="kana-cell"><span class="kana-c">こ</span><span class="kana-r">ko</span></div>
+                        <div class="kana-cell"><span class="kana-c">さ</span><span class="kana-r">sa</span></div>
+                        <div class="kana-cell"><span class="kana-c">し</span><span class="kana-r">shi</span></div>
+                        <div class="kana-cell"><span class="kana-c">す</span><span class="kana-r">su</span></div>
+                        <div class="kana-cell"><span class="kana-c">せ</span><span class="kana-r">se</span></div>
+                        <div class="kana-cell"><span class="kana-c">そ</span><span class="kana-r">so</span></div>
+                        <div class="kana-cell"><span class="kana-c">た</span><span class="kana-r">ta</span></div>
+                        <div class="kana-cell"><span class="kana-c">ち</span><span class="kana-r">chi</span></div>
+                        <div class="kana-cell"><span class="kana-c">つ</span><span class="kana-r">tsu</span></div>
+                        <div class="kana-cell"><span class="kana-c">て</span><span class="kana-r">te</span></div>
+                        <div class="kana-cell"><span class="kana-c">と</span><span class="kana-r">to</span></div>
+                        <div class="kana-cell"><span class="kana-c">な</span><span class="kana-r">na</span></div>
+                        <div class="kana-cell"><span class="kana-c">に</span><span class="kana-r">ni</span></div>
+                        <div class="kana-cell"><span class="kana-c">ぬ</span><span class="kana-r">nu</span></div>
+                        <div class="kana-cell"><span class="kana-c">ね</span><span class="kana-r">ne</span></div>
+                        <div class="kana-cell"><span class="kana-c">の</span><span class="kana-r">no</span></div>
+                        <div class="kana-cell"><span class="kana-c">は</span><span class="kana-r">ha</span></div>
+                        <div class="kana-cell"><span class="kana-c">ひ</span><span class="kana-r">hi</span></div>
+                        <div class="kana-cell"><span class="kana-c">ふ</span><span class="kana-r">fu</span></div>
+                        <div class="kana-cell"><span class="kana-c">へ</span><span class="kana-r">he</span></div>
+                        <div class="kana-cell"><span class="kana-c">ほ</span><span class="kana-r">ho</span></div>
+                        <div class="kana-cell"><span class="kana-c">ま</span><span class="kana-r">ma</span></div>
+                        <div class="kana-cell"><span class="kana-c">み</span><span class="kana-r">mi</span></div>
+                        <div class="kana-cell"><span class="kana-c">む</span><span class="kana-r">mu</span></div>
+                        <div class="kana-cell"><span class="kana-c">め</span><span class="kana-r">me</span></div>
+                        <div class="kana-cell"><span class="kana-c">も</span><span class="kana-r">mo</span></div>
+                        <div class="kana-cell"><span class="kana-c">や</span><span class="kana-r">ya</span></div>
+                        <div class="kana-cell"><span class="kana-c">ゆ</span><span class="kana-r">yu</span></div>
+                        <div class="kana-cell"><span class="kana-c">よ</span><span class="kana-r">yo</span></div>
+                        <div class="kana-cell"><span class="kana-c">ら</span><span class="kana-r">ra</span></div>
+                        <div class="kana-cell"><span class="kana-c">り</span><span class="kana-r">ri</span></div>
+                        <div class="kana-cell"><span class="kana-c">る</span><span class="kana-r">ru</span></div>
+                        <div class="kana-cell"><span class="kana-c">れ</span><span class="kana-r">re</span></div>
+                        <div class="kana-cell"><span class="kana-c">ろ</span><span class="kana-r">ro</span></div>
+                        <div class="kana-cell"><span class="kana-c">わ</span><span class="kana-r">wa</span></div>
+                        <div class="kana-cell"><span class="kana-c">を</span><span class="kana-r">wo</span></div>
+                        <div class="kana-cell"><span class="kana-c">ん</span><span class="kana-r">n</span></div>
+                    </div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>2. Essential N5 Vocabulary</h3>
+                    <table class="vt">
+                        <thead>
+                            <tr>
+                                <th>Japanese</th>
+                                <th>Reading</th>
+                                <th>English</th>
+                                <th>Japanese</th>
+                                <th>Reading</th>
+                                <th>English</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>こんにちは</td>
+                                <td>Konnichiwa</td>
+                                <td>Hello</td>
+                                <td>ありがとう</td>
+                                <td>Arigatou</td>
+                                <td>Thank you</td>
+                            </tr>
+                            <tr>
+                                <td>さようなら</td>
+                                <td>Sayounara</td>
+                                <td>Goodbye</td>
+                                <td>すみません</td>
+                                <td>Sumimasen</td>
+                                <td>Excuse me / Sorry</td>
+                            </tr>
+                            <tr>
+                                <td>わたし</td>
+                                <td>Watashi</td>
+                                <td>I / Me</td>
+                                <td>あなた</td>
+                                <td>Anata</td>
+                                <td>You</td>
+                            </tr>
+                            <tr>
+                                <td>がくせい</td>
+                                <td>Gakusei</td>
+                                <td>Student</td>
+                                <td>せんせい</td>
+                                <td>Sensei</td>
+                                <td>Teacher</td>
+                            </tr>
+                            <tr>
+                                <td>たべる</td>
+                                <td>Taberu</td>
+                                <td>To eat</td>
+                                <td>のむ</td>
+                                <td>Nomu</td>
+                                <td>To drink</td>
+                            </tr>
+                            <tr>
+                                <td>いく</td>
+                                <td>Iku</td>
+                                <td>To go</td>
+                                <td>くる</td>
+                                <td>Kuru</td>
+                                <td>To come</td>
+                            </tr>
+                            <tr>
+                                <td>きょう</td>
+                                <td>Kyou</td>
+                                <td>Today</td>
+                                <td>あした</td>
+                                <td>Ashita</td>
+                                <td>Tomorrow</td>
+                            </tr>
+                            <tr>
+                                <td>おおきい</td>
+                                <td>Ookii</td>
+                                <td>Big / Large</td>
+                                <td>ちいさい</td>
+                                <td>Chiisai</td>
+                                <td>Small</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>3. Japanese Particles — Grammar Essentials</h3>
+                    <p>Japanese uses <strong>particles</strong> — small words placed after nouns — to indicate the
+                        grammatical role of each word in a sentence. They have no direct equivalent in English.</p>
+                    <table class="st-table">
+                        <thead>
+                            <tr>
+                                <th>Particle</th>
+                                <th>Role</th>
+                                <th>Example Sentence</th>
+                                <th>Meaning</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>は (wa)</td>
+                                <td>Topic marker</td>
+                                <td>わたし は がくせい です。</td>
+                                <td>I am a student.</td>
+                            </tr>
+                            <tr>
+                                <td>を (wo)</td>
+                                <td>Direct object marker</td>
+                                <td>ごはん を たべます。</td>
+                                <td>I eat rice.</td>
+                            </tr>
+                            <tr>
+                                <td>に (ni)</td>
+                                <td>Direction / destination / time</td>
+                                <td>がっこう に いきます。</td>
+                                <td>I go to school.</td>
+                            </tr>
+                            <tr>
+                                <td>で (de)</td>
+                                <td>Location where action happens</td>
+                                <td>としょかん で よみます。</td>
+                                <td>I read at the library.</td>
+                            </tr>
+                            <tr>
+                                <td>の (no)</td>
+                                <td>Possession ("of" / "'s")</td>
+                                <td>わたし の ほん</td>
+                                <td>My book</td>
+                            </tr>
+                            <tr>
+                                <td>か (ka)</td>
+                                <td>Question marker (sentence-end)</td>
+                                <td>がくせい です か？</td>
+                                <td>Are you a student?</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ══════════════════════ ENGLISH GRAMMAR ══════════════════════ -->
+            <section id="english" class="rs" data-aos="fade-up">
+                <div class="sh-row">
+                    <div class="ci" style="background:rgba(51,153,255,.12);color:#3399ff;font-size:1.4rem;"><i
+                            class="bi bi-alphabet"></i></div>
+                    <h2 class="st">English Grammar &amp; Communication</h2>
+                </div>
+                <p class="ss">A solid grammar foundation is the key to confident English communication — in writing,
+                    speaking, and professional settings.</p>
+
+                <div class="lb-block">
+                    <h3>1. The 12 Tenses — Complete Overview</h3>
+                    <p>English has 3 time frames (Past, Present, Future) and 4 aspects (Simple, Continuous, Perfect,
+                        Perfect Continuous), giving us 12 tenses in total.</p>
+                    <table class="st-table">
+                        <thead>
+                            <tr>
+                                <th>Tense</th>
+                                <th>Formula</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Present Simple</td>
+                                <td>S + V1 (s/es)</td>
+                                <td>She studies every day.</td>
+                            </tr>
+                            <tr>
+                                <td>Present Continuous</td>
+                                <td>S + am/is/are + V-ing</td>
+                                <td>She is studying now.</td>
+                            </tr>
+                            <tr>
+                                <td>Present Perfect</td>
+                                <td>S + have/has + V3</td>
+                                <td>She has studied the chapter.</td>
+                            </tr>
+                            <tr>
+                                <td>Present Perfect Cont.</td>
+                                <td>S + have/has been + V-ing</td>
+                                <td>She has been studying for 2 hours.</td>
+                            </tr>
+                            <tr>
+                                <td>Past Simple</td>
+                                <td>S + V2</td>
+                                <td>She studied yesterday.</td>
+                            </tr>
+                            <tr>
+                                <td>Past Continuous</td>
+                                <td>S + was/were + V-ing</td>
+                                <td>She was studying at 9 PM.</td>
+                            </tr>
+                            <tr>
+                                <td>Past Perfect</td>
+                                <td>S + had + V3</td>
+                                <td>She had studied before the exam.</td>
+                            </tr>
+                            <tr>
+                                <td>Past Perfect Cont.</td>
+                                <td>S + had been + V-ing</td>
+                                <td>She had been studying all night.</td>
+                            </tr>
+                            <tr>
+                                <td>Future Simple</td>
+                                <td>S + will + V1</td>
+                                <td>She will study tomorrow.</td>
+                            </tr>
+                            <tr>
+                                <td>Future Continuous</td>
+                                <td>S + will be + V-ing</td>
+                                <td>She will be studying at noon.</td>
+                            </tr>
+                            <tr>
+                                <td>Future Perfect</td>
+                                <td>S + will have + V3</td>
+                                <td>She will have studied by Friday.</td>
+                            </tr>
+                            <tr>
+                                <td>Future Perfect Cont.</td>
+                                <td>S + will have been + V-ing</td>
+                                <td>She will have been studying for 5 hrs.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>2. Conditional Sentences — All Four Types</h3>
+                    <table class="st-table">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Use</th>
+                                <th>Structure</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Type 0</td>
+                                <td>Scientific / general truth</td>
+                                <td>If + Present, Present</td>
+                                <td>If you heat water, it boils.</td>
+                            </tr>
+                            <tr>
+                                <td>Type 1</td>
+                                <td>Real / likely future event</td>
+                                <td>If + Present, will + V1</td>
+                                <td>If I study hard, I will pass.</td>
+                            </tr>
+                            <tr>
+                                <td>Type 2</td>
+                                <td>Unreal present / unlikely future</td>
+                                <td>If + Past Simple, would + V1</td>
+                                <td>If I had money, I would travel.</td>
+                            </tr>
+                            <tr>
+                                <td>Type 3</td>
+                                <td>Unreal / impossible past</td>
+                                <td>If + Past Perfect, would have + V3</td>
+                                <td>If I had studied, I would have passed.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>3. Active vs. Passive Voice</h3>
+                    <p>In <strong>active voice</strong>, the subject performs the action. In <strong>passive
+                            voice</strong>, the subject receives the action. Passive is formed with
+                        <code>be + V3 (past participle)</code>.
+                    </p>
+                    <div class="rh">
+                        <strong>Active:</strong> The teacher corrected the papers.<br>
+                        <strong>Passive:</strong> The papers <u>were corrected</u> by the teacher.<br><br>
+                        <strong>Active:</strong> They are building a new school.<br>
+                        <strong>Passive:</strong> A new school <u>is being built</u>.<br><br>
+                        <strong>Active:</strong> She will submit the report.<br>
+                        <strong>Passive:</strong> The report <u>will be submitted</u> by her.
+                    </div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>4. Prepositions of Time &amp; Place</h3>
+                    <table class="st-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Prepositions</th>
+                                <th>Usage Examples</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Specific time</td>
+                                <td>at</td>
+                                <td>at 9 AM · at noon · at midnight · at the weekend</td>
+                            </tr>
+                            <tr>
+                                <td>Days / dates</td>
+                                <td>on</td>
+                                <td>on Monday · on 5th June · on my birthday</td>
+                            </tr>
+                            <tr>
+                                <td>Months / years / periods</td>
+                                <td>in</td>
+                                <td>in June · in 2024 · in the morning · in summer</td>
+                            </tr>
+                            <tr>
+                                <td>Specific location</td>
+                                <td>at</td>
+                                <td>at the door · at the bus stop · at home</td>
+                            </tr>
+                            <tr>
+                                <td>Surface / line</td>
+                                <td>on</td>
+                                <td>on the table · on the wall · on the floor</td>
+                            </tr>
+                            <tr>
+                                <td>Enclosed space</td>
+                                <td>in</td>
+                                <td>in the room · in the city · in Bangladesh</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- ══════════════════════ PUBLIC SPEAKING ══════════════════════ -->
+            <section id="speaking" class="rs" data-aos="fade-up">
+                <div class="sh-row">
+                    <div class="ci" style="background:rgba(39,174,96,.12);color:#27ae60;font-size:1.4rem;"><i
+                            class="bi bi-mic-fill"></i></div>
+                    <h2 class="st">Public Speaking &amp; Leadership Skills</h2>
+                </div>
+                <p class="ss">The ability to speak clearly and confidently is one of the most valuable skills in any
+                    career. This course builds your voice, your presence, and your leadership mindset.</p>
+
+                <div class="lb-block">
+                    <h3>1. Overcoming Stage Fright</h3>
+                    <p>Stage fright is physiological — your body releases adrenaline when you feel nervous. The goal is
+                        not to eliminate it, but to channel it as energy.</p>
+                    <div class="rh">
+                        <strong>The 3-Step Reset Before You Speak:</strong><br><br>
+                        <strong>1. Breathe slowly.</strong> Take 3 deep breaths before you begin. This activates your
+                        parasympathetic nervous system and lowers your heart rate.<br><br>
+                        <strong>2. Ground yourself physically.</strong> Feel your feet on the floor. Stand with your
+                        feet shoulder-width apart. An open, grounded posture signals calm to your brain.<br><br>
+                        <strong>3. Start strong.</strong> Nervousness peaks in the first 30 seconds. Once you deliver
+                        your opening line, the anxiety drops significantly — so prepare your first sentence very well.
+                    </div>
+                    <div class="nb"><i class="bi bi-info-circle-fill"></i> Studies show that 73% of people fear public
+                        speaking more than death. Every great speaker was once a nervous beginner. Confidence is a skill
+                        built through practice — not a personality trait you are born with.</div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>2. The Structure of a Powerful Speech</h3>
+                    <p>Every effective speech — whether a 2-minute introduction or a 30-minute keynote — follows the
+                        same core structure.</p>
+                    <table class="st-table">
+                        <thead>
+                            <tr>
+                                <th>Part</th>
+                                <th>Goal</th>
+                                <th>What to include</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hook (Opening)</td>
+                                <td>Grab attention in the first 10 seconds</td>
+                                <td>A bold question, surprising fact, short story, or memorable quote</td>
+                            </tr>
+                            <tr>
+                                <td>Context</td>
+                                <td>Tell the audience why this matters to them</td>
+                                <td>The problem being addressed; why it is relevant right now</td>
+                            </tr>
+                            <tr>
+                                <td>Core Message</td>
+                                <td>Deliver your 2–3 main points</td>
+                                <td>One clear idea per point. Support each with an example, data, or a story.</td>
+                            </tr>
+                            <tr>
+                                <td>Conclusion</td>
+                                <td>Leave a lasting impression</td>
+                                <td>Summarize key points, then deliver a clear call to action or a closing line</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>3. Body Language &amp; Vocal Variety</h3>
+                    <p>Research suggests that how you say something matters more than what you say. Your non-verbal
+                        communication often speaks louder than your words.</p>
+                    <div class="rh">
+                        <strong>Posture:</strong> Stand with feet shoulder-width apart, spine tall. Avoid crossing arms,
+                        rocking, or putting hands in pockets. Open posture broadcasts confidence.<br><br>
+                        <strong>Eye Contact:</strong> Hold one person's gaze for 3–4 seconds, then move to another.
+                        Avoid staring at notes or the floor. Real eye contact builds real connection.<br><br>
+                        <strong>Vocal Variety:</strong> Vary your speed (slow down for emphasis, speed up for
+                        excitement), your volume, and your pitch. A flat, monotone voice loses the audience within two
+                        minutes.<br><br>
+                        <strong>The Power of Silence:</strong> A 2-second pause before a key point feels long to you but
+                        creates dramatic emphasis for the audience. Never fill silence with "um" or "uh."
+                    </div>
+                </div>
+
+                <hr class="sd">
+
+                <div class="lb-block">
+                    <h3>4. Five Principles of Leadership Communication</h3>
+                    <div class="ex-row">
+                        <span class="ex-num">01</span>
+                        <div><strong>Clarity over Complexity.</strong> If you cannot explain your idea in simple
+                            language, you do not fully understand it yet. Simplify before you amplify. The most powerful
+                            communicators make hard things sound easy.</div>
+                    </div>
+                    <div class="ex-row">
+                        <span class="ex-num">02</span>
+                        <div><strong>Listen more than you speak.</strong> Great leaders ask more questions than they
+                            give answers. Active listening — making the other person feel heard — builds trust faster
+                            than any speech.</div>
+                    </div>
+                    <div class="ex-row">
+                        <span class="ex-num">03</span>
+                        <div><strong>Tell stories, not just facts.</strong> The human brain is wired for narrative. A
+                            well-told story is retained 22 times more effectively than a statistic presented alone.
+                        </div>
+                    </div>
+                    <div class="ex-row">
+                        <span class="ex-num">04</span>
+                        <div><strong>Own the room before you speak.</strong> Walk in with purpose. Take your position.
+                            Pause, scan the audience, and then begin. Those first 5 silent seconds set the entire tone
+                            for what follows.</div>
+                    </div>
+                    <div class="ex-row">
+                        <span class="ex-num">05</span>
+                        <div><strong>Practice out loud — not just in your head.</strong> Mental rehearsal is weak.
+                            Standing up and speaking out loud builds the physical muscle memory from which true
+                            confidence is born.</div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+        <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <span class="footer-logo-text">Incipient Study</span>
+                    <p class="footer-description">Empowering learners worldwide to master programming and languages through structured, certified, live online education. Affiliated with Ghana Company &amp; Innovative IT Solutions Agency.</p>
+                    <div class="footer-social-icons">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <h5 class="footer-col-title">Courses</h5>
+                    <ul class="footer-nav-list">
+                        <li><a href="courses.html">C Programming</a></li>
+                        <li><a href="courses.html">C++ Programming</a></li>
+                        <li><a href="courses.html">Python</a></li>
+                        <li><a href="courses.html">Full Stack (Laravel)</a></li>
+                        <li><a href="courses.html">Chinese (HSK 1&amp;2)</a></li>
+                        <li><a href="courses.html">Japanese (N5)</a></li>
+                        <li><a href="courses.html">English Grammar</a></li>
+                        <li><a href="courses.html">Public Speaking</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <h5 class="footer-col-title">Quick Links</h5>
+                    <ul class="footer-nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">All Courses</a></li>
+                        <li><a href="roadmaps.html">Roadmaps</a></li>
+                        <li><a href="learn-free.html">Free Lessons</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="instructors.html">Instructors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="footer-col-title">Want More? Enroll!</h5>
+                    <div class="footer-enroll-box">
+                        <p>Free resources are just the start. Enroll in a live course for structured learning, assignments, and a certificate.</p>
+                        <a href="contact.html" class="btn-footer-enroll"><i class="bi bi-award-fill me-1"></i> Enroll Today</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider">
+                <p>&copy; 2026 Incipient Study. All rights reserved. | Affiliated with Ghana Company &amp; Innovative IT Solutions Agency | Developed by <a href="https://webdevhumaira.github.io/Developers-Info/" target="_blank" rel="noopener">Developers</a></p>
+            </div>
+        </div>
+    </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <script src="assets/js/shared.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

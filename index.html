@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incipient Study - Master Languages & Programming</title>
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+
+    <!-- Bootstrap 5 CDN -->
+    <!-- Bootstrap Icons -->
+    <!-- Google Fonts -->
+    <!-- AOS (Animate on Scroll) -->
+
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-ring" id="cursor-ring"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/+8801234567890" class="whatsapp-float" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top-btn" id="scrollTopBtn">
+        <i class="bi bi-arrow-up"></i>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg container">
+            <a class="navbar-brand" href="index.html"><img src="assets/images/navlogo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="roadmaps.html">Roadmaps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="learn-free.html">Learn for Free</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="instructors.html">Instructors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item dropdown theme-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-moon-stars"></i> Theme
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" data-theme="light">Light</a></li>
+                            <li><a class="dropdown-item" href="#" data-theme="dark">Dark</a></li>
+                            <li><a class="dropdown-item" href="#" data-theme="auto">Auto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><button class="btn btn-gradient-primary">Sign up</button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with particle canvas -->
+    <section class="hero-section" id="home">
+        <canvas id="particle-canvas"></canvas>
+        <div class="floating-element floating-1"></div>
+        <div class="floating-element floating-2"></div>
+        <div class="floating-element floating-3"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="hero-title">Let's Code Your Career!</h1>
+                    <p class="hero-subtitle">Learn programming the fun way! Master Web Development, Python, and more
+                        with interactive lessons and real-world projects.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-hero-primary"><i class="bi bi-play-circle me-2"></i> Start Learning
+                            Free</button>
+                        <button class="btn btn-hero-secondary"><i class="bi bi-book me-2"></i> View Courses</button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="hero-stat"><span class="hero-stat-number">75K+</span><span
+                                class="hero-stat-label">Active Learners</span></div>
+                        <div class="hero-stat"><span class="hero-stat-number">3000+</span><span
+                                class="hero-stat-label">Success Stories</span></div>
+                        <div class="hero-stat"><span class="hero-stat-number">50+</span><span
+                                class="hero-stat-label">Expert Mentors</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <img src="assets/images/hero-img.png" alt="Coding Hero">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Why Choose Incipient Study? <i class="bi bi-stars"
+                    style="-webkit-text-fill-color: var(--secondary-color); font-size: 2rem; vertical-align: middle;"></i>
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Learn with fun, build with confidence,
+                and land your dream job!</p>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-card tilt-card">
+                        <div class="feature-icon"><i class="bi bi-puzzle"></i></div>
+                        <h3 class="feature-title">Gamified Learning</h3>
+                        <p class="feature-text">Master coding through interactive challenges, fun quizzes, and exciting
+                            projects that keep you engaged!</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="feature-card tilt-card">
+                        <div class="feature-icon"><i class="bi bi-people"></i></div>
+                        <h3 class="feature-title">Live Support 24/7</h3>
+                        <p class="feature-text">Get instant help from expert mentors anytime! Join daily doubt-solving
+                            sessions and never feel stuck.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="feature-card tilt-card">
+                        <div class="feature-icon"><i class="bi bi-briefcase"></i></div>
+                        <h3 class="feature-title">Job Placement</h3>
+                        <p class="feature-text">We don't stop at teaching! Get dedicated job placement support until you
+                            land your dream role.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="feature-card tilt-card">
+                        <div class="feature-icon"><i class="bi bi-lightning-charge"></i></div>
+                        <h3 class="feature-title">Fast Track Learning</h3>
+                        <p class="feature-text">Go from zero to job-ready in 6-8 months with our intensive, practical
+                            curriculum.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="feature-card tilt-card">
+                        <div class="feature-icon"><i class="bi bi-code-square"></i></div>
+                        <h3 class="feature-title">Real Projects</h3>
+                        <p class="feature-text">Build 20+ real-world projects that showcase your skills to potential
+                            employers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="feature-card tilt-card">
+                        <div class="feature-icon"><i class="bi bi-award"></i></div>
+                        <h3 class="feature-title">Certificates</h3>
+                        <p class="feature-text">Earn industry-recognized certificates that boost your resume and career
+                            prospects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses-section" id="courses">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Our Courses <i class="bi bi-mortarboard-fill"
+                    style="-webkit-text-fill-color: var(--secondary-color); font-size: 2rem; vertical-align: middle;"></i>
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Languages, Programming & Professional
+                Skills — all in one place!</p>
+            <div class="row g-4">
+                <!-- C Programming -->
+                <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="100">
+                    <div class="course-card tilt-card">
+                        <div class="course-image">
+                            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600"
+                                alt="C Programming">
+                            <span class="course-badge"><i class="bi bi-fire me-1"></i>5 Batches</span>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">C Programming</h3>
+                            <p class="course-description">Fundamentals of C — variables, loops, functions, and memory
+                                management. The foundation of all programming.</p>
+                            <div class="course-meta">
+                                <div class="course-meta-item"><i class="bi bi-layers"></i><span>Beginner</span></div>
+                                <div class="course-meta-item"><i class="bi bi-patch-check-fill"
+                                        style="color: var(--primary-color)"></i><span>Certificate</span></div>
+                            </div>
+                            <a href="courses.html" class="course-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- C++ Programming -->
+                <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="150">
+                    <div class="course-card tilt-card">
+                        <div class="course-image">
+                            <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600"
+                                alt="C++ Programming">
+                            <span class="course-badge"><i class="bi bi-gem me-1"></i>Advanced</span>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">C++ Programming</h3>
+                            <p class="course-description">OOP concepts, STL, and advanced C++ programming techniques for
+                                serious software development.</p>
+                            <div class="course-meta">
+                                <div class="course-meta-item"><i class="bi bi-layers"></i><span>Intermediate</span>
+                                </div>
+                                <div class="course-meta-item"><i class="bi bi-patch-check-fill"
+                                        style="color: var(--primary-color)"></i><span>Certificate</span></div>
+                            </div>
+                            <a href="courses.html" class="course-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Python -->
+                <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="200">
+                    <div class="course-card tilt-card">
+                        <div class="course-image">
+                            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600" alt="Python">
+                            <span class="course-badge"><i class="bi bi-rocket-takeoff-fill me-1"></i>Popular</span>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Python Programming</h3>
+                            <p class="course-description">Python basics to intermediate — scripting, data handling &
+                                automation. Build real-world projects.</p>
+                            <div class="course-meta">
+                                <div class="course-meta-item"><i class="bi bi-layers"></i><span>Beginner–Inter.</span>
+                                </div>
+                                <div class="course-meta-item"><i class="bi bi-patch-check-fill"
+                                        style="color: var(--primary-color)"></i><span>Certificate</span></div>
+                            </div>
+                            <a href="courses.html" class="course-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Full Stack Laravel -->
+                <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="250">
+                    <div class="course-card tilt-card">
+                        <div class="course-image">
+                            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600"
+                                alt="Full Stack Laravel">
+                            <span class="course-badge" style="background: linear-gradient(135deg, #f5af19, #f12711)"><i
+                                    class="bi bi-stars me-1"></i>Upcoming</span>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Full Stack Development (Laravel)</h3>
+                            <p class="course-description">Complete web development with Laravel — Frontend + Backend
+                                integration. Free workshop already done!</p>
+                            <div class="course-meta">
+                                <div class="course-meta-item"><i class="bi bi-layers"></i><span>Intermediate</span>
+                                </div>
+                                <div class="course-meta-item"><i class="bi bi-patch-check-fill"
+                                        style="color: var(--primary-color)"></i><span>Certificate</span></div>
+                            </div>
+                            <a href="courses.html" class="course-btn"
+                                style="background: linear-gradient(135deg, #f5af19, #f12711)">Coming Soon</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Chinese Language -->
+                <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="300">
+                    <div class="course-card tilt-card">
+                        <div class="course-image">
+                            <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600"
+                                alt="Chinese Language">
+                            <span class="course-badge"><i class="bi bi-translate me-1"></i>2 Batches</span>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Chinese Language (HSK 1 & 2)</h3>
+                            <p class="course-description">Pinyin tone, Hanzi character notes — Beginner to Elementary
+                                level. Build a strong Chinese foundation.</p>
+                            <div class="course-meta">
+                                <div class="course-meta-item"><i class="bi bi-layers"></i><span>Beginner</span></div>
+                                <div class="course-meta-item"><i class="bi bi-patch-check-fill"
+                                        style="color: var(--primary-color)"></i><span>Certificate</span></div>
+                            </div>
+                            <a href="courses.html" class="course-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Public Speaking -->
+                <div class="col-lg-4 col-md-6" data-aos="flip-left" data-aos-delay="350">
+                    <div class="course-card tilt-card">
+                        <div class="course-image">
+                            <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600"
+                                alt="Public Speaking">
+                            <span class="course-badge" style="background: linear-gradient(135deg, #667eea, #764ba2)"><i
+                                    class="bi bi-mic-fill me-1"></i>Soft Skills</span>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Public Speaking & Leadership</h3>
+                            <p class="course-description">Confidence building, effective communication & leadership
+                                training. Elevate your professional presence.</p>
+                            <div class="course-meta">
+                                <div class="course-meta-item"><i class="bi bi-layers"></i><span>All Levels</span></div>
+                                <div class="course-meta-item"><i class="bi bi-patch-check-fill"
+                                        style="color: var(--primary-color)"></i><span>Certificate</span></div>
+                            </div>
+                            <a href="courses.html" class="course-btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5" data-aos="fade-up">
+                <a href="courses.html" class="btn-gradient-primary btn"
+                    style="padding: 0.9rem 3rem; font-size: 1.1rem; border-radius: 50px;">
+                    <i class="bi bi-grid-3x3-gap-fill me-2"></i>View All Courses
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Explore Learning Paths <i class="bi bi-bullseye"
+                    style="-webkit-text-fill-color: var(--secondary-color); font-size: 2rem; vertical-align: middle;"></i>
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Find the perfect course category for
+                your goals</p>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-card tilt-card">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80"
+                            alt="Web Development" class="category-thumb">
+                        <div class="category-card-body">
+                            <div class="category-icon"><i class="bi bi-laptop-fill"
+                                    style="font-size:2.2rem; background: linear-gradient(135deg, #667eea, #764ba2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                            </div>
+                            <h3 class="category-title">Web Development</h3>
+                            <p class="category-count">25+ Courses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-card tilt-card">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80" alt="Python"
+                            class="category-thumb">
+                        <div class="category-card-body">
+                            <div class="category-icon"><i class="bi bi-filetype-py"
+                                    style="font-size:2.2rem; background: linear-gradient(135deg, #f093fb, #f5576c); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                            </div>
+                            <h3 class="category-title">Python</h3>
+                            <p class="category-count">18+ Courses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-card tilt-card">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"
+                            alt="Data Science" class="category-thumb">
+                        <div class="category-card-body">
+                            <div class="category-icon"><i class="bi bi-bar-chart-line-fill"
+                                    style="font-size:2.2rem; background: linear-gradient(135deg, #4facfe, #00f2fe); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                            </div>
+                            <h3 class="category-title">Data Science</h3>
+                            <p class="category-count">15+ Courses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="category-card tilt-card">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80"
+                            alt="App Development" class="category-thumb">
+                        <div class="category-card-body">
+                            <div class="category-icon"><i class="bi bi-phone-fill"
+                                    style="font-size:2.2rem; background: linear-gradient(135deg, #43e97b, #38f9d7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                            </div>
+                            <h3 class="category-title">App Development</h3>
+                            <p class="category-count">12+ Courses</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section-modern">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in">
+                    <div class="stat-card-modern">
+                        <div class="stat-icon"><i class="bi bi-people"></i></div><span class="counter"
+                            data-target="75507">0</span>
+                        <p class="stat-label">Active Learners</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-card-modern">
+                        <div class="stat-icon"><i class="bi bi-trophy"></i></div><span class="counter"
+                            data-target="3000">0</span>
+                        <p class="stat-label">Success Stories</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-card-modern">
+                        <div class="stat-icon"><i class="bi bi-book"></i></div><span class="counter"
+                            data-target="150">0</span>
+                        <p class="stat-label">Courses Available</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-card-modern">
+                        <div class="stat-icon"><i class="bi bi-star"></i></div><span class="counter"
+                            data-target="4">0</span>
+                        <p class="stat-label">Average Rating</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Student Success Stories <i class="bi bi-stars"
+                    style="-webkit-text-fill-color: var(--secondary-color); font-size: 2rem; vertical-align: middle;"></i>
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Hear from our amazing students who
+                transformed their careers!</p>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-right" data-aos-delay="200">
+                    <div class="testimonial-card tilt-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Programming Hero changed my life! I went from zero coding knowledge
+                            to landing a job at a top tech company in just 6 months. The support and mentorship were
+                            incredible!</p>
+                        <div class="rating mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i></div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AH</div>
+                            <div class="author-info">
+                                <h5>Abdul Hassan</h5>
+                                <p>Web Developer at TechCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card tilt-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">The gamified learning approach made coding so much fun! I never
+                            thought learning could be this exciting. Now I'm building my own projects and freelancing
+                            successfully!</p>
+                        <div class="rating mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i></div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SR</div>
+                            <div class="author-info">
+                                <h5>Sadia Rahman</h5>
+                                <p>Freelance Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-left" data-aos-delay="400">
+                    <div class="testimonial-card tilt-card">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">Best investment I've made! The instructors are patient, the
+                            community is supportive, and the curriculum is exactly what the industry needs. Highly
+                            recommended!</p>
+                        <div class="rating mb-3"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i></div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MK</div>
+                            <div class="author-info">
+                                <h5>Mohammad Khan</h5>
+                                <p>Full Stack Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2 class="cta-title">Ready to Start Your Journey? <i class="bi bi-balloon-heart-fill"
+                        style="color: rgba(255,255,255,0.9); font-size: 2.2rem; vertical-align: middle;"></i></h2>
+                <p class="cta-text">Join thousands of successful learners who transformed their careers with us. Your
+                    dream tech job is just a click away!</p>
+                <div>
+                    <button class="btn btn-cta"><i class="bi bi-play-circle me-2"></i> Start Learning Free</button>
+                    <button class="btn btn-cta"><i class="bi bi-telephone me-2"></i> Talk to Advisor</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content" data-aos="fade-up">
+                <h2 class="newsletter-title">Stay Updated! <i class="bi bi-envelope-paper-heart-fill"
+                        style="color: rgba(255,255,255,0.9); font-size: 2rem; vertical-align: middle;"></i></h2>
+                <p class="newsletter-text">Get exclusive tips, resources, and course updates delivered to your inbox
+                    weekly!</p>
+                <form class="newsletter-form"><input type="email" placeholder="Enter your email address"
+                        required><button type="submit">Subscribe Now</button></form>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Incipient Study <i class="bi bi-mortarboard-fill"
+                    style="-webkit-text-fill-color: var(--secondary-color); font-size: 2rem; vertical-align: middle;"></i>
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Empowering learners for a brighter
+                future</p>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-content">
+                        <h3 style="font-size:2rem;font-weight:700;margin-bottom:1.5rem;">We bridge the gap between
+                            languages and technology</h3>
+                        <p style="color:var(--text-muted);font-size:1.1rem;margin-bottom:1rem;">Founded in 2020,
+                            Incipient Study has helped thousands master Chinese, Japanese, and programming. Our mission
+                            is to make high-quality education accessible, interactive, and enjoyable for everyone.</p>
+                        <p style="color:var(--text-muted);margin-bottom:2rem;">We combine expert instructors, hands-on
+                            projects, and a supportive community to ensure you achieve fluency in both human and
+                            computer languages.</p>
+                        <div class="d-flex gap-4 flex-wrap">
+                            <div class="about-badge"><i class="bi bi-check-circle-fill"
+                                    style="color:var(--success-color);font-size:1.5rem;"></i><span>5+ years
+                                    experience</span></div>
+                            <div class="about-badge"><i class="bi bi-check-circle-fill"
+                                    style="color:var(--success-color);font-size:1.5rem;"></i><span>Global
+                                    community</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-image"><img src="assets/images/about-section-img.png" alt="Students Learning"
+                            style="width:100%;border-radius:20px;box-shadow:0 20px 60px rgba(0,0,0,0.15);"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Batches Section -->
+    <section class="batches-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Upcoming Batches <i class="bi bi-fire"
+                    style="-webkit-text-fill-color: var(--secondary-color); font-size: 2rem; vertical-align: middle;"></i>
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Enroll now – limited seats available!
+            </p>
+            <div class="row g-4">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+                    <div class="batch-card tilt-card">
+                        <div class="batch-thumbnail">
+                            <div class="thumb-bg"
+                                style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <i class="bi bi-translate thumb-icon"></i>
+                                <span class="thumb-label"><i class="bi bi-globe2 me-1"></i>Language</span>
+                            </div>
+                        </div>
+                        <div class="batch-card-body">
+                            <div class="batch-header">
+                                <h5 class="batch-title">Chinese Language (HSK 1-3)</h5><span
+                                    class="batch-badge">Featured</span>
+                            </div>
+                            <div class="batch-details">
+                                <div class="batch-meta"><i class="bi bi-calendar-check"></i><span>Starts 10 March
+                                        2025</span></div>
+                                <div class="batch-meta"><i class="bi bi-people"></i><span class="seats-alert">Only 12
+                                        seats
+                                        left!</span></div>
+                            </div><button class="btn-batch-enroll">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+                    <div class="batch-card tilt-card">
+                        <div class="batch-thumbnail">
+                            <div class="thumb-bg"
+                                style="background: linear-gradient(135deg, #4facfe 0%, #00c6ff 100%);">
+                                <i class="bi bi-code-slash thumb-icon"></i>
+                                <span class="thumb-label"><i class="bi bi-laptop me-1"></i>Programming</span>
+                            </div>
+                        </div>
+                        <div class="batch-card-body">
+                            <div class="batch-header">
+                                <h5 class="batch-title">Complete Web Development</h5><span
+                                    class="batch-badge">Popular</span>
+                            </div>
+                            <div class="batch-details">
+                                <div class="batch-meta"><i class="bi bi-calendar-check"></i><span>Starts 15 March
+                                        2025</span></div>
+                                <div class="batch-meta"><i class="bi bi-people"></i><span class="seats-alert">Only 8
+                                        seats
+                                        left!</span></div>
+                            </div><button class="btn-batch-enroll">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+                    <div class="batch-card tilt-card">
+                        <div class="batch-thumbnail">
+                            <div class="thumb-bg"
+                                style="background: linear-gradient(135deg, #f5576c 0%, #c0392b 100%);">
+                                <i class="bi bi-bar-chart-fill thumb-icon"></i>
+                                <span class="thumb-label"><i class="bi bi-graph-up me-1"></i>Data Science</span>
+                            </div>
+                        </div>
+                        <div class="batch-card-body">
+                            <div class="batch-header">
+                                <h5 class="batch-title">Python for Data Science</h5><span class="batch-badge">New</span>
+                            </div>
+                            <div class="batch-details">
+                                <div class="batch-meta"><i class="bi bi-calendar-check"></i><span>Starts 20 March
+                                        2025</span></div>
+                                <div class="batch-meta"><i class="bi bi-people"></i><span class="seats-alert">20 seats
+                                        available</span></div>
+                            </div><button class="btn-batch-enroll">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+                    <div class="batch-card tilt-card">
+                        <div class="batch-thumbnail">
+                            <div class="thumb-bg"
+                                style="background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);">
+                                <i class="bi bi-chat-square-dots-fill thumb-icon"></i>
+                                <span class="thumb-label"><i class="bi bi-globe-asia-australia me-1"></i>Language</span>
+                            </div>
+                        </div>
+                        <div class="batch-card-body">
+                            <div class="batch-header">
+                                <h5 class="batch-title">Japanese Language (N5-N4)</h5><span
+                                    class="batch-badge">Trending</span>
+                            </div>
+                            <div class="batch-details">
+                                <div class="batch-meta"><i class="bi bi-calendar-check"></i><span>Starts 5 April
+                                        2025</span>
+                                </div>
+                                <div class="batch-meta"><i class="bi bi-people"></i><span class="seats-alert">15 seats
+                                        available</span></div>
+                            </div><button class="btn-batch-enroll">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" style="-webkit-text-fill-color: white;">How It Works <i
+                    class="bi bi-lightning-charge-fill"
+                    style="color: white; font-size: 2rem; vertical-align: middle;"></i></h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Start your learning journey in just 4
+                simple steps</p>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="200">
+                    <div class="step-card tilt-card">
+                        <div class="step-number">1</div>
+                        <div class="step-icon"><i class="bi bi-person-plus-fill"></i></div>
+                        <h4 class="step-title">Sign Up</h4>
+                        <p class="step-description">Create your free account in seconds and unlock access to our
+                            learning platform</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="300">
+                    <div class="step-card tilt-card">
+                        <div class="step-number">2</div>
+                        <div class="step-icon"><i class="bi bi-search"></i></div>
+                        <h4 class="step-title">Choose Course</h4>
+                        <p class="step-description">Browse our catalog and select the perfect course for your learning
+                            goals</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="400">
+                    <div class="step-card tilt-card">
+                        <div class="step-number">3</div>
+                        <div class="step-icon"><i class="bi bi-laptop"></i></div>
+                        <h4 class="step-title">Learn & Practice</h4>
+                        <p class="step-description">Engage with interactive lessons, exercises, and real-world projects
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="flip-left" data-aos-delay="500">
+                    <div class="step-card tilt-card">
+                        <div class="step-number">4</div>
+                        <div class="step-icon"><i class="bi bi-trophy-fill"></i></div>
+                        <h4 class="step-title">Get Certified</h4>
+                        <p class="step-description">Complete your course and receive a certificate to showcase your
+                            skills</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instructors Section -->
+    <section class="instructors-section" id="instructors">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Meet Our Expert Instructors <i class="bi bi-person-video3"
+                    style="-webkit-text-fill-color: var(--secondary-color); font-size: 2rem; vertical-align: middle;"></i>
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Learn from the best in language and
+                programming</p>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="instructor-card tilt-card">
+                        <div class="instructor-avatar-large"><i class="bi bi-translate"></i></div>
+                        <h4 class="instructor-name">Maryam Tahira</h4>
+                        <p class="instructor-role">Chinese Language Expert</p>
+                        <p class="instructor-bio">10+ years teaching Mandarin</p>
+                        <div class="instructor-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i> <span>(500+ reviews)</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="instructor-card tilt-card">
+                        <div class="instructor-avatar-large"><i class="bi bi-chat-square-text-fill"></i></div>
+                        <h4 class="instructor-name">Halima Khatun</h4>
+                        <p class="instructor-role">Japanese Language Expert</p>
+                        <p class="instructor-bio">Native speaker, JLPT certified</p>
+                        <div class="instructor-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i> <span>(450+ reviews)</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="instructor-card tilt-card">
+                        <div class="instructor-avatar-large"><i class="bi bi-cpu-fill"></i></div>
+                        <h4 class="instructor-name">Rezaul Zannat</h4>
+                        <p class="instructor-role">C/C++ Programming Expert</p>
+                        <p class="instructor-bio">15 years embedded systems experience</p>
+                        <div class="instructor-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i> <span>(600+ reviews)</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="instructor-card tilt-card">
+                        <div class="instructor-avatar-large"><i class="bi bi-bar-chart-fill"></i></div>
+                        <h4 class="instructor-name">Sarah Khan</h4>
+                        <p class="instructor-role">Python & Data Science</p>
+                        <p class="instructor-bio">Lead data scientist at tech firm</p>
+                        <div class="instructor-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i> <span>(550+ reviews)</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="instructor-card tilt-card">
+                        <div class="instructor-avatar-large"><i class="bi bi-layers-fill"></i></div>
+                        <h4 class="instructor-name">Munira Chowdhury</h4>
+                        <p class="instructor-role">Full Stack Web Developer</p>
+                        <p class="instructor-bio">React & Node.js specialist</p>
+                        <div class="instructor-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i> <span>(700+ reviews)</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="instructor-card tilt-card">
+                        <div class="instructor-avatar-large"><i class="bi bi-robot"></i></div>
+                        <h4 class="instructor-name">Ahmed Hassan</h4>
+                        <p class="instructor-role">AI & Machine Learning</p>
+                        <p class="instructor-bio">PhD in Computer Science</p>
+                        <div class="instructor-rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i> <span>(480+ reviews)</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Free Learning Resources <i class="bi bi-book-half"
+                    style="-webkit-text-fill-color: var(--accent-color); font-size: 2rem; vertical-align: middle;"></i>
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Tips, guides, and insights from our
+                experts</p>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-right" data-aos-delay="200">
+                    <div class="blog-card tilt-card">
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80"
+                            alt="Chinese Tones" class="blog-thumbnail">
+                        <div class="blog-card-body">
+                            <div class="blog-icon"><i class="bi bi-translate"></i></div>
+                            <h5 class="blog-title">5 Tips to Learn Chinese Tones</h5>
+                            <p class="blog-meta"><i class="bi bi-calendar"></i> Feb 12, 2025</p>
+                            <p class="blog-excerpt">Master pronunciation with these simple techniques that work for
+                                every
+                                learner...</p><a href="#" class="blog-link">Read More <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-card tilt-card">
+                        <img src="https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=600&q=80"
+                            alt="Python vs C" class="blog-thumbnail">
+                        <div class="blog-card-body">
+                            <div class="blog-icon"><i class="bi bi-code-slash"></i></div>
+                            <h5 class="blog-title">Python vs C: Which First?</h5>
+                            <p class="blog-meta"><i class="bi bi-calendar"></i> Jan 28, 2025</p>
+                            <p class="blog-excerpt">A beginner's guide to choosing your first programming language based
+                                on
+                                goals...</p><a href="#" class="blog-link">Read More <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-left" data-aos-delay="400">
+                    <div class="blog-card tilt-card">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&q=80"
+                            alt="Web Dev Career" class="blog-thumbnail">
+                        <div class="blog-card-body">
+                            <div class="blog-icon"><i class="bi bi-briefcase"></i></div>
+                            <h5 class="blog-title">Career Roadmap for Web Dev</h5>
+                            <p class="blog-meta"><i class="bi bi-calendar"></i> Jan 15, 2025</p>
+                            <p class="blog-excerpt">From junior to senior developer – what to learn at each stage of
+                                your
+                                journey...</p><a href="#" class="blog-link">Read More <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Roadmap Section -->
+    <section class="roadmap-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" style="-webkit-text-fill-color: white;">Your Learning Path <i
+                    class="bi bi-map-fill" style="color: white; font-size: 2rem; vertical-align: middle;"></i></h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Structured roadmap from beginner to pro
+            </p>
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-right" data-aos-delay="200">
+                    <div class="roadmap-card tilt-card">
+                        <div class="roadmap-level beginner">Beginner</div>
+                        <h4 class="roadmap-title">Language Fundamentals</h4>
+                        <p class="roadmap-description">Basic vocabulary, grammar, pronunciation. For programming: syntax
+                            & logic.</p>
+                        <ul class="roadmap-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Learn basics</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Practice daily</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Simple projects</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="roadmap-card tilt-card">
+                        <div class="roadmap-level intermediate">Intermediate</div>
+                        <h4 class="roadmap-title">Conversation & Projects</h4>
+                        <p class="roadmap-description">Speaking practice, reading comprehension, small coding projects.
+                        </p>
+                        <ul class="roadmap-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Build portfolio</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Real conversations</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Complex apps</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4" data-aos="fade-left" data-aos-delay="400">
+                    <div class="roadmap-card tilt-card">
+                        <div class="roadmap-level advanced">Advanced</div>
+                        <h4 class="roadmap-title">Fluency & Mastery</h4>
+                        <p class="roadmap-description">Advanced grammar, specialized vocabulary, full-stack
+                            applications.</p>
+                        <ul class="roadmap-list">
+                            <li><i class="bi bi-check-circle-fill"></i> Professional level</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Industry projects</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Expert status</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Section -->
+    <section class="certificate-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="certificate-preview">
+                        <div class="certificate-mockup"><i class="bi bi-award"
+                                style="font-size:5rem;color:var(--primary-color);"></i>
+                            <h3 style="margin-top:1.5rem;font-size:2rem;">Certificate of Completion</h3>
+                            <p style="color:var(--text-muted);font-size:1.2rem;">Incipient Study</p>
+                            <hr style="width:60%;margin:2rem auto;border-color:var(--primary-color);">
+                            <div class="certificate-features">
+                                <p><i class="bi bi-check-circle-fill" style="color:var(--success-color);"></i> Verified
+                                    & Shareable</p>
+                                <p><i class="bi bi-qr-code"></i> Unique QR Code</p>
+                                <p><i class="bi bi-shield-check"></i> Blockchain Verified</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h2 class="section-title text-center">Industry Certificates</h2>
+                    <p class="text-center" style="color:var(--text-muted);font-size:1.1rem;margin-bottom:2rem;">Earn
+                        certificates that
+                        showcase your skills. Each certificate includes a unique link and QR code for easy verification
+                        by employers worldwide.</p>
+                    <div class="certificate-badges text-center"><span class="cert-badge"><i
+                                class="bi bi-check-circle-fill me-1"></i>Globally Accepted</span><span
+                            class="cert-badge"><i class="bi bi-check-circle-fill me-1"></i>Lifetime Access</span><span
+                            class="cert-badge"><i class="bi bi-check-circle-fill me-1"></i>LinkedIn Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Features Section -->
+    <section class="platform-features-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Student Dashboard &amp; Features <i class="bi bi-display-fill"
+                    style="-webkit-text-fill-color: var(--accent-color); font-size: 2rem; vertical-align: middle;"></i>
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Everything you need in one place</p>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="platform-feature tilt-card">
+                        <div class="platform-icon"><i class="bi bi-graph-up"></i></div>
+                        <h5>Progress Tracking</h5>
+                        <p>Monitor your learning journey with detailed analytics</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="platform-feature tilt-card">
+                        <div class="platform-icon"><i class="bi bi-calendar-check"></i></div>
+                        <h5>Class Schedule</h5>
+                        <p>Never miss a class with smart reminders</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="platform-feature tilt-card">
+                        <div class="platform-icon"><i class="bi bi-chat-dots"></i></div>
+                        <h5>Live Support</h5>
+                        <p>24/7 chat support from instructors</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="platform-feature tilt-card">
+                        <div class="platform-icon"><i class="bi bi-file-earmark-code"></i></div>
+                        <h5>Code Playground</h5>
+                        <p>Practice coding directly in browser</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions <i
+                    class="bi bi-question-circle-fill"
+                    style="-webkit-text-fill-color: var(--secondary-color); font-size: 2rem; vertical-align: middle;"></i>
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Got questions? We've got answers!</p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion faq-accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq1">Course duration কত?</button></h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Most courses are 6-8 weeks long, with 2-3 hours of weekly
+                                    commitment. Self-paced options available for flexible learning!</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq2">Live না recorded classes?</button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">We offer both! Live sessions for interaction, and recorded
+                                    versions for flexibility. Best of both worlds!</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq3">Certificate থাকবে?</button></h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">Yes! Every course includes a verified certificate upon
+                                    completion that you can share on LinkedIn and with employers.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq4">Support কিভাবে পাবো?</button></h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">24/7 chat support, email, and community forum. Instructors
+                                    also hold weekly live Q&A sessions!</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header"><button class="accordion-button collapsed" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#faq5">Payment methods?</button></h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">bKash, Nagad, Rocket, credit/debit cards, and bank transfer
+                                    accepted. Easy EMI options available!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container" style="position:relative;z-index:2;">
+            <h2 class="section-title" data-aos="fade-up">Get In Touch <i class="bi bi-telephone-fill"
+                    style="color: white; font-size: 2rem; vertical-align: middle;"></i></h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">We'd love to hear from you — reach out
+                anytime!</p>
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="contact-form-card">
+                        <div class="contact-card-header">
+                            <div class="header-icon-wrap"><i class="bi bi-chat-dots-fill"></i></div>
+                            <div>
+                                <h4>Send a Message</h4>
+                                <p class="mb-0" style="color:var(--text-muted);font-size:0.9rem;">We reply within 24
+                                    hours</p>
+                            </div>
+                        </div>
+                        <form class="contact-form">
+                            <div class="mb-3"><label class="form-label fw-600">Your Name</label>
+                                <div class="input-with-icon"><i class="bi bi-person"></i><input type="text"
+                                        class="form-control" placeholder="John Doe" required></div>
+                            </div>
+                            <div class="mb-3"><label class="form-label fw-600">Email Address</label>
+                                <div class="input-with-icon"><i class="bi bi-envelope"></i><input type="email"
+                                        class="form-control" placeholder="john@example.com" required></div>
+                            </div>
+                            <div class="mb-3"><label class="form-label fw-600">Subject</label>
+                                <div class="input-with-icon"><i class="bi bi-tag"></i><input type="text"
+                                        class="form-control" placeholder="Course inquiry..."></div>
+                            </div>
+                            <div class="mb-4"><label class="form-label fw-600">Message</label>
+                                <textarea class="form-control" rows="4" placeholder="Tell us how we can help you..."
+                                    style="border-radius:12px;border:2px solid #e8ecef;background:#f8f9ff;padding:1rem;"></textarea>
+                            </div>
+                            <button type="submit" class="btn-contact-submit"><i class="bi bi-send-fill me-2"></i>Send
+                                Message</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="contact-info-card">
+                        <h4><i class="bi bi-info-circle-fill me-2"></i>Contact Information</h4>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                            <div>
+                                <h5>Our Location</h5>
+                                <p>Chattogram, Bangladesh</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon"><i class="bi bi-envelope-fill"></i></div>
+                            <div>
+                                <h5>Email Us</h5>
+                                <p><a
+                                        href="/cdn-cgi/l/email-protection#d0b8b5bcbcbf90b9beb3b9a0b9b5bea4a3a4a5b4a9b2b4feb3bfbd"><span
+                                            class="__cf_email__"
+                                            data-cfemail="28404d4444476841464b4158414d465c5b5c5d4c514a4c064b4745">[email&#160;protected]</span></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon"><i class="bi bi-telephone-fill"></i></div>
+                            <div>
+                                <h5>Call Us</h5>
+                                <p>+880 1234-567890</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon"><i class="bi bi-clock-fill"></i></div>
+                            <div>
+                                <h5>Office Hours</h5>
+                                <p>Mon – Fri: 9AM – 6PM</p>
+                            </div>
+                        </div>
+                        <div class="contact-social">
+                            <a href="#" class="contact-social-icon" title="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="contact-social-icon" title="Twitter / X"><i
+                                    class="bi bi-twitter-x"></i></a>
+                            <a href="#" class="contact-social-icon" title="Instagram"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="#" class="contact-social-icon" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="contact-social-icon" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <span class="footer-logo-text">Incipient Study</span>
+                    <p class="footer-description">Empowering learners worldwide to master programming and languages through structured, certified, live online education. Affiliated with Ghana Company &amp; Innovative IT Solutions Agency.</p>
+                    <div class="footer-social-icons">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <h5 class="footer-col-title">Courses</h5>
+                    <ul class="footer-nav-list">
+                        <li><a href="courses.html">C Programming</a></li>
+                        <li><a href="courses.html">C++ Programming</a></li>
+                        <li><a href="courses.html">Python</a></li>
+                        <li><a href="courses.html">Full Stack (Laravel)</a></li>
+                        <li><a href="courses.html">Chinese (HSK 1&amp;2)</a></li>
+                        <li><a href="courses.html">Japanese (N5)</a></li>
+                        <li><a href="courses.html">English Grammar</a></li>
+                        <li><a href="courses.html">Public Speaking</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <h5 class="footer-col-title">Quick Links</h5>
+                    <ul class="footer-nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">All Courses</a></li>
+                        <li><a href="roadmaps.html">Roadmaps</a></li>
+                        <li><a href="learn-free.html">Free Lessons</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="instructors.html">Instructors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="footer-col-title">Stay Connected</h5>
+                    <div class="footer-enroll-box">
+                        <p>Follow us for learning tips, course updates, and free resources. Your coding journey starts with one step.</p>
+                        <a href="contact.html" class="btn-footer-enroll"><i class="bi bi-award-fill me-1"></i> Enroll Today</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider">
+                <p>&copy; 2026 Incipient Study. All rights reserved. | Affiliated with Ghana Company &amp; Innovative IT Solutions Agency | Developed by <a href="https://webdevhumaira.github.io/Developers-Info/" target="_blank" rel="noopener">Developers</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <script src="assets/js/shared.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+</body>
+
+</html>

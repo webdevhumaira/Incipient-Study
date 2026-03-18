@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Instructors — Incipient Study</title>
+
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
+</head>
+
+<body data-theme="light">
+        <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/+8801234567890" class="whatsapp-float" target="_blank" rel="noopener">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Scroll to Top Button -->
+    <!-- Header -->
+    <header class="main-header">
+        <nav class="navbar navbar-expand-lg container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <i class="bi bi-mortarboard-fill" style="font-size:1.5rem;background:linear-gradient(135deg,#086A7C,#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;"></i>
+                <span class="navbar-brand-text">Incipient Study</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainNav" aria-controls="navbarMainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMainNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-1">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="roadmaps.html">Roadmaps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="learn-free.html">Learn for Free</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="instructors.html">Instructors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item dropdown theme-dropdown ms-1">
+                        <button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" id="themeToggle">
+                            <i class="bi bi-moon-stars-fill" id="themeIcon"></i> Theme
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#" data-theme="light"><i class="bi bi-sun-fill me-2"></i>Light</a></li>
+                            <li><a class="dropdown-item" href="#" data-theme="dark"><i class="bi bi-moon-stars-fill me-2"></i>Dark</a></li>
+                            <li><a class="dropdown-item" href="#" data-theme="auto"><i class="bi bi-circle-half me-2"></i>Auto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item ms-1"><a href="contact.html" class="btn-nav-enroll">Enroll Now</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="ph">
+        <div class="floating-element floating-1"></div>
+        <div class="floating-element floating-2"></div>
+        <div class="floating-element floating-3"></div>
+
+        <div class="ph-shapes"><span></span><span></span><span></span></div>
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="hbc" data-aos="fade-up">
+                <a href="index.html"><i class="bi bi-house-fill me-1"></i>Home</a>
+                <span><i class="bi bi-chevron-right"></i></span>
+                <span style="color:white;font-weight:600;">Our Instructors</span>
+            </div>
+            <h1 class="htitle" data-aos="fade-up" data-aos-delay="60">
+                Learn from the<br><span>Best in the Field</span>
+            </h1>
+            <p class="hsub" data-aos="fade-up" data-aos-delay="130">
+                Every Incipient Study instructor brings real-world expertise, a passion for teaching, and a commitment
+                to your success. Small batches mean you actually get their attention &mdash; not just their slides.
+            </p>
+            <div class="hpills" data-aos="fade-up" data-aos-delay="200">
+                <span class="hpill"><i class="bi bi-people-fill"></i> 6 Expert Instructors</span>
+                <span class="hpill"><i class="bi bi-camera-video-fill"></i> Live Teaching Only</span>
+                <span class="hpill"><i class="bi bi-chat-dots-fill"></i> Direct Q&amp;A Access</span>
+                <span class="hpill"><i class="bi bi-globe2"></i> 4 Countries</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FILTER TABS + FEATURED INSTRUCTORS -->
+    <section class="featured-sec">
+        <div class="container">
+            <div class="slbl mx-auto d-block text-center mb-2" style="width:fit-content;" data-aos="fade-up"><i
+                    class="bi bi-person-video3"></i> Meet the Team</div>
+            <h2 class="stitle" data-aos="fade-up">Our Expert Instructors</h2>
+            <p class="ssub" data-aos="fade-up" data-aos-delay="80">Filter by subject area or browse all</p>
+
+            <div class="ftabs" data-aos="fade-up" data-aos-delay="120">
+                <button class="ftab active" data-filter="all">All Instructors</button>
+                <button class="ftab" data-filter="programming">Programming</button>
+                <button class="ftab" data-filter="language">Languages</button>
+                <button class="ftab" data-filter="skills">Soft Skills</button>
+            </div>
+
+            <!-- FEATURED: Maryam Tahira — Chinese -->
+            <div class="feat-card inst-item" data-cat="language" data-aos="fade-up" data-aos-delay="100">
+                <div class="row g-0">
+                    <div class="col-lg-7">
+                        <div class="feat-left">
+                            <div class="feat-avatar-wrap">
+                                <div class="feat-avatar" style="background:linear-gradient(135deg,#c0392b,#e74c3c);"><i
+                                        class="bi bi-translate"></i></div>
+                                <span class="feat-badge-wrap"><i class="bi bi-star-fill me-1"></i>Top Rated</span>
+                            </div>
+                            <div class="feat-name">Maryam Tahira</div>
+                            <div class="feat-role"><i class="bi bi-translate me-1"></i>Chinese Language Expert &mdash;
+                                HSK 1 &amp; 2</div>
+                            <p class="feat-bio">Maryam has been teaching Mandarin Chinese to international students for
+                                over 10 years. She specializes in helping complete beginners overcome the two things
+                                that stop most people: tones and characters. Her method treats Pinyin as a bridge, not a
+                                crutch, and has helped hundreds of students pass their first HSK exam.</p>
+                            <div class="feat-philosophy">
+                                "The biggest mistake new Chinese learners make is trying to learn everything at once. I
+                                teach tones first &mdash; nothing else. Get that foundation right and the rest follows
+                                naturally."
+                            </div>
+                            <div class="feat-chips">
+                                <span class="feat-chip">4 Tones &amp; Pinyin</span>
+                                <span class="feat-chip">Hanzi Characters</span>
+                                <span class="feat-chip">HSK 1 Vocabulary</span>
+                                <span class="feat-chip">HSK 2 Grammar</span>
+                                <span class="feat-chip">Conversation Practice</span>
+                                <span class="feat-chip">Exam Preparation</span>
+                            </div>
+                            <div class="feat-meta">
+                                <div class="feat-meta-item"><i class="bi bi-clock-fill"></i><span>10+ years
+                                        teaching</span></div>
+                                <div class="feat-meta-item"><i class="bi bi-people-fill"></i><span>500+ students</span>
+                                </div>
+                                <div class="feat-meta-item"><i class="bi bi-collection-fill"></i><span>2 Batches
+                                        completed</span></div>
+                                <div class="feat-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><span>5.0 rating</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="feat-right" style="background:linear-gradient(135deg,#c0392b,#e74c3c);">
+                            <div class="feat-stat-grid">
+                                <div class="feat-stat-box"><span class="feat-stat-val">10+</span>
+                                    <div class="feat-stat-lbl">Years Teaching</div>
+                                </div>
+                                <div class="feat-stat-box"><span class="feat-stat-val">500+</span>
+                                    <div class="feat-stat-lbl">Students</div>
+                                </div>
+                                <div class="feat-stat-box"><span class="feat-stat-val">HSK 2</span>
+                                    <div class="feat-stat-lbl">Level Taught</div>
+                                </div>
+                                <div class="feat-stat-box"><span class="feat-stat-val">5.0&#9733;</span>
+                                    <div class="feat-stat-lbl">Avg Rating</div>
+                                </div>
+                            </div>
+                            <div class="feat-course-list">
+                                <div class="feat-course-item"><i class="bi bi-check-circle-fill"></i><span>Chinese
+                                        Language (HSK 1 &amp; 2)</span></div>
+                                <div class="feat-course-item"><i class="bi bi-calendar-event"></i><span>New batch
+                                        enrolling now</span></div>
+                                <div class="feat-course-item"><i class="bi bi-globe2"></i><span>Students from BD, IN,
+                                        GH, AE</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FEATURED: Rezaul Zannat — C/C++ -->
+            <div class="feat-card inst-item" data-cat="programming" data-aos="fade-up" data-aos-delay="100">
+                <div class="row g-0">
+                    <div class="col-lg-7 order-lg-2">
+                        <div class="feat-left">
+                            <div class="feat-avatar-wrap">
+                                <div class="feat-avatar" style="background:linear-gradient(135deg,#086A7C,#4facfe);"><i
+                                        class="bi bi-cpu-fill"></i></div>
+                                <span class="feat-badge-wrap"><i class="bi bi-fire me-1"></i>Most Popular</span>
+                            </div>
+                            <div class="feat-name">Rezaul Zannat</div>
+                            <div class="feat-role"><i class="bi bi-code-slash me-1"></i>C &amp; C++ Programming Expert
+                            </div>
+                            <p class="feat-bio">With 15 years of embedded systems and systems programming experience,
+                                Rezaul teaches C the way it was meant to be learned &mdash; from the hardware up. His
+                                students do not just learn syntax; they learn to think about memory, execution flow, and
+                                program correctness. He has run 5 successful C batches and 1 C++ batch.</p>
+                            <div class="feat-philosophy">
+                                "Most teachers teach students to write C. I teach students to read the machine. Once you
+                                understand what the computer is actually doing with your code, every bug becomes
+                                obvious."
+                            </div>
+                            <div class="feat-chips">
+                                <span class="feat-chip">Variables &amp; Data Types</span>
+                                <span class="feat-chip">Pointers &amp; Memory</span>
+                                <span class="feat-chip">Functions &amp; Recursion</span>
+                                <span class="feat-chip">Structs &amp; File I/O</span>
+                                <span class="feat-chip">OOP in C++</span>
+                                <span class="feat-chip">STL &amp; Templates</span>
+                            </div>
+                            <div class="feat-meta">
+                                <div class="feat-meta-item"><i class="bi bi-clock-fill"></i><span>15 years
+                                        experience</span></div>
+                                <div class="feat-meta-item"><i class="bi bi-people-fill"></i><span>600+ students</span>
+                                </div>
+                                <div class="feat-meta-item"><i class="bi bi-collection-fill"></i><span>6 Batches
+                                        completed</span></div>
+                                <div class="feat-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><span>5.0 rating</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 order-lg-1">
+                        <div class="feat-right" style="background:linear-gradient(135deg,#086A7C,#3a7bd5);">
+                            <div class="feat-stat-grid">
+                                <div class="feat-stat-box"><span class="feat-stat-val">15+</span>
+                                    <div class="feat-stat-lbl">Years Exp.</div>
+                                </div>
+                                <div class="feat-stat-box"><span class="feat-stat-val">600+</span>
+                                    <div class="feat-stat-lbl">Students</div>
+                                </div>
+                                <div class="feat-stat-box"><span class="feat-stat-val">6</span>
+                                    <div class="feat-stat-lbl">Batches</div>
+                                </div>
+                                <div class="feat-stat-box"><span class="feat-stat-val">5.0&#9733;</span>
+                                    <div class="feat-stat-lbl">Avg Rating</div>
+                                </div>
+                            </div>
+                            <div class="feat-course-list">
+                                <div class="feat-course-item"><i class="bi bi-terminal-fill"></i><span>C Programming (5
+                                        batches)</span></div>
+                                <div class="feat-course-item"><i class="bi bi-cpu-fill"></i><span>C++ Programming (1
+                                        batch)</span></div>
+                                <div class="feat-course-item"><i class="bi bi-calendar-event"></i><span>Batch 6
+                                        enrolling now</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GRID CARDS (remaining instructors) -->
+    <section class="grid-sec">
+        <div class="container">
+            <h3 style="font-size:1.4rem;font-weight:800;color:var(--td);margin-bottom:2rem;" data-aos="fade-up">All
+                Instructors</h3>
+            <div class="row g-4" id="instGrid">
+
+                <!-- Maryam (also in grid) -->
+                <div class="col-lg-4 col-md-6 inst-item" data-cat="language" data-aos="fade-up" data-aos-delay="80">
+                    <div class="inst-card">
+                        <div class="inst-thumb" style="background:linear-gradient(135deg,#c0392b,#e74c3c);">
+                            <div class="inst-thumb-shine"></div>
+                            <div class="inst-avatar"
+                                style="background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.4);"><i
+                                    class="bi bi-translate" style="color:white;"></i></div>
+                            <span class="inst-exp-badge">10+ yrs</span>
+                        </div>
+                        <div class="inst-body">
+                            <div class="inst-name">Maryam Tahira</div>
+                            <div class="inst-role"><i class="bi bi-translate me-1"></i>Chinese Language Expert</div>
+                            <p class="inst-bio">10+ years teaching Mandarin to international students. Specialist in
+                                tones, Pinyin, and HSK exam preparation for complete beginners.</p>
+                            <div class="inst-chips">
+                                <span class="inst-chip">HSK 1 &amp; 2</span>
+                                <span class="inst-chip">Pinyin</span>
+                                <span class="inst-chip">Conversation</span>
+                                <span class="inst-chip">Exam Prep</span>
+                            </div>
+                            <div class="inst-footer">
+                                <div class="inst-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><span>500+ students</span></div>
+                                <a href="index.html#contact" class="inst-enroll">Enroll</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Halima Khatun — Japanese -->
+                <div class="col-lg-4 col-md-6 inst-item" data-cat="language" data-aos="fade-up" data-aos-delay="150">
+                    <div class="inst-card">
+                        <div class="inst-thumb" style="background:linear-gradient(135deg,#e74c3c,#f5576c);">
+                            <div class="inst-thumb-shine"></div>
+                            <div class="inst-avatar"
+                                style="background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.4);font-family:'Ubuntu',sans-serif;font-size:2.2rem;color:white;font-weight:900;">
+                                &#26085;</div>
+                            <span class="inst-exp-badge">JLPT Cert.</span>
+                        </div>
+                        <div class="inst-body">
+                            <div class="inst-name">Halima Khatun</div>
+                            <div class="inst-role"><i class="bi bi-chat-square-text-fill me-1"></i>Japanese Language
+                                Expert</div>
+                            <p class="inst-bio">JLPT-certified instructor known for making Hiragana, particles, and verb
+                                conjugation feel logical rather than overwhelming. Students consistently reach N5
+                                readiness on their first attempt.</p>
+                            <div class="inst-chips">
+                                <span class="inst-chip">Hiragana &amp; Katakana</span>
+                                <span class="inst-chip">Particles</span>
+                                <span class="inst-chip">Verb Conjugation</span>
+                                <span class="inst-chip">JLPT N5</span>
+                            </div>
+                            <div class="inst-footer">
+                                <div class="inst-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><span>450+ students</span></div>
+                                <a href="index.html#contact" class="inst-enroll">Enroll</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aisha Noor — English Grammar -->
+                <div class="col-lg-4 col-md-6 inst-item" data-cat="language" data-aos="fade-up" data-aos-delay="220">
+                    <div class="inst-card">
+                        <div class="inst-thumb" style="background:linear-gradient(135deg,#3399ff,#0066cc);">
+                            <div class="inst-thumb-shine"></div>
+                            <div class="inst-avatar"
+                                style="background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.4);"><i
+                                    class="bi bi-alphabet" style="color:white;"></i></div>
+                            <span class="inst-exp-badge">8 yrs</span>
+                        </div>
+                        <div class="inst-body">
+                            <div class="inst-name">Aisha Noor</div>
+                            <div class="inst-role"><i class="bi bi-alphabet me-1"></i>English Grammar Instructor</div>
+                            <p class="inst-bio">Former corporate communication trainer turned English grammar
+                                specialist. Focuses on eliminating hesitation when speaking and writing — not just
+                                correcting mistakes, but building the instinct for correct English.</p>
+                            <div class="inst-chips">
+                                <span class="inst-chip">12 Tenses</span>
+                                <span class="inst-chip">Conditionals</span>
+                                <span class="inst-chip">Active/Passive</span>
+                                <span class="inst-chip">Professional Writing</span>
+                            </div>
+                            <div class="inst-footer">
+                                <div class="inst-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><span>380+ students</span></div>
+                                <a href="index.html#contact" class="inst-enroll">Enroll</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rezaul (also in grid) -->
+                <div class="col-lg-4 col-md-6 inst-item" data-cat="programming" data-aos="fade-up" data-aos-delay="80">
+                    <div class="inst-card">
+                        <div class="inst-thumb" style="background:linear-gradient(135deg,#086A7C,#4facfe);">
+                            <div class="inst-thumb-shine"></div>
+                            <div class="inst-avatar"
+                                style="background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.4);"><i
+                                    class="bi bi-cpu-fill" style="color:white;"></i></div>
+                            <span class="inst-exp-badge">15+ yrs</span>
+                        </div>
+                        <div class="inst-body">
+                            <div class="inst-name">Rezaul Zannat</div>
+                            <div class="inst-role"><i class="bi bi-code-slash me-1"></i>C &amp; C++ Programming Expert
+                            </div>
+                            <p class="inst-bio">15 years embedded systems experience. Teaches C the way it was meant to
+                                be understood — from the hardware up. His pointer explanations are legendary among
+                                students.</p>
+                            <div class="inst-chips">
+                                <span class="inst-chip">C Programming</span>
+                                <span class="inst-chip">Pointers</span>
+                                <span class="inst-chip">C++ OOP</span>
+                                <span class="inst-chip">STL</span>
+                            </div>
+                            <div class="inst-footer">
+                                <div class="inst-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><span>600+ students</span></div>
+                                <a href="index.html#contact" class="inst-enroll">Enroll</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sarah Khan — Python -->
+                <div class="col-lg-4 col-md-6 inst-item" data-cat="programming" data-aos="fade-up" data-aos-delay="150">
+                    <div class="inst-card">
+                        <div class="inst-thumb" style="background:linear-gradient(135deg,#f7971e,#ffd200);">
+                            <div class="inst-thumb-shine"></div>
+                            <div class="inst-avatar"
+                                style="background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.4);"><i
+                                    class="bi bi-filetype-py" style="color:white;"></i></div>
+                            <span class="inst-exp-badge">7 yrs</span>
+                        </div>
+                        <div class="inst-body">
+                            <div class="inst-name">Sarah Khan</div>
+                            <div class="inst-role"><i class="bi bi-filetype-py me-1"></i>Python Instructor</div>
+                            <p class="inst-bio">Lead Python developer with a background in automation and data. Teaches
+                                Python project-first — students build something real every single week, from Week 1
+                                onward. Portfolio-ready projects by course end.</p>
+                            <div class="inst-chips">
+                                <span class="inst-chip">Python Basics</span>
+                                <span class="inst-chip">OOP &amp; Classes</span>
+                                <span class="inst-chip">File Handling</span>
+                                <span class="inst-chip">Mini Projects</span>
+                            </div>
+                            <div class="inst-footer">
+                                <div class="inst-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><span>550+ students</span></div>
+                                <a href="index.html#contact" class="inst-enroll">Enroll</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Munira Chowdhury — Full Stack -->
+                <div class="col-lg-4 col-md-6 inst-item" data-cat="programming" data-aos="fade-up" data-aos-delay="220">
+                    <div class="inst-card">
+                        <div class="inst-thumb" style="background:linear-gradient(135deg,#e44d26,#764ba2);">
+                            <div class="inst-thumb-shine"></div>
+                            <div class="inst-avatar"
+                                style="background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.4);"><i
+                                    class="bi bi-globe2" style="color:white;"></i></div>
+                            <span class="inst-exp-badge">6 yrs</span>
+                        </div>
+                        <div class="inst-body">
+                            <div class="inst-name">Munira Chowdhury</div>
+                            <div class="inst-role"><i class="bi bi-globe2 me-1"></i>Full Stack Web Developer</div>
+                            <p class="inst-bio">Full-stack developer with shipped production applications for clients in
+                                three countries. Teaches the complete HTML &rarr; CSS &rarr; JavaScript &rarr; Laravel
+                                pipeline with real deployment at the finish line.</p>
+                            <div class="inst-chips">
+                                <span class="inst-chip">HTML &amp; CSS</span>
+                                <span class="inst-chip">JavaScript</span>
+                                <span class="inst-chip">Laravel MVC</span>
+                                <span class="inst-chip">Deployment</span>
+                            </div>
+                            <div class="inst-footer">
+                                <div class="inst-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><span>700+ students</span></div>
+                                <a href="index.html#contact" class="inst-enroll">Enroll</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Farhan Islam — Public Speaking -->
+                <div class="col-lg-4 col-md-6 offset-lg-4 inst-item" data-cat="skills" data-aos="fade-up"
+                    data-aos-delay="80">
+                    <div class="inst-card">
+                        <div class="inst-thumb" style="background:linear-gradient(135deg,#11998e,#38ef7d);">
+                            <div class="inst-thumb-shine"></div>
+                            <div class="inst-avatar"
+                                style="background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.4);"><i
+                                    class="bi bi-mic-fill" style="color:white;"></i></div>
+                            <span class="inst-exp-badge">8 yrs</span>
+                        </div>
+                        <div class="inst-body">
+                            <div class="inst-name">Farhan Islam</div>
+                            <div class="inst-role"><i class="bi bi-mic-fill me-1"></i>Public Speaking &amp; Leadership
+                                Coach</div>
+                            <p class="inst-bio">Corporate communication trainer who has coached executives and students
+                                alike. His method focuses on the psychology of stage fright first — because confidence
+                                cannot be faked, but it absolutely can be built.</p>
+                            <div class="inst-chips">
+                                <span class="inst-chip">Stage Fright</span>
+                                <span class="inst-chip">Speech Structure</span>
+                                <span class="inst-chip">Body Language</span>
+                                <span class="inst-chip">Leadership Voice</span>
+                            </div>
+                            <div class="inst-footer">
+                                <div class="inst-stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><span>480+ students</span></div>
+                                <a href="index.html#contact" class="inst-enroll">Enroll</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /row -->
+        </div>
+    </section>
+
+    <!-- TEACHING PHILOSOPHY STRIP -->
+    <section class="phil-sec">
+        <div class="container" style="position:relative;z-index:1;">
+            <h2 class="stitle" style="-webkit-text-fill-color:white;background:none;color:white;" data-aos="fade-up">How
+                We Teach</h2>
+            <p style="text-align:center;color:rgba(255,255,255,.8);font-size:1rem;margin-bottom:2.5rem;"
+                data-aos="fade-up" data-aos-delay="80">The principles behind every Incipient Study lesson</p>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="phil-card">
+                        <div class="phil-icon"><i class="bi bi-people-fill"></i></div>
+                        <div class="phil-title">Small Batches Only</div>
+                        <p class="phil-desc">We cap every batch at a small number of students. Not because of capacity
+                            &mdash; because you cannot get real attention in a crowd of 200.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="180">
+                    <div class="phil-card">
+                        <div class="phil-icon"><i class="bi bi-camera-video-fill"></i></div>
+                        <div class="phil-title">Live, Not Recorded</div>
+                        <p class="phil-desc">Every session is live. You can ask questions, get immediate clarification,
+                            and the instructor can adapt to what the class actually needs that day.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="260">
+                    <div class="phil-card">
+                        <div class="phil-icon"><i class="bi bi-layers-fill"></i></div>
+                        <div class="phil-title">Sequence Matters</div>
+                        <p class="phil-desc">We are obsessive about the order in which things are taught. The right
+                            sequence removes confusion before it starts. Wrong sequence creates it permanently.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="340">
+                    <div class="phil-card">
+                        <div class="phil-icon"><i class="bi bi-clipboard-check-fill"></i></div>
+                        <div class="phil-title">Practice, Then Theory</div>
+                        <p class="phil-desc">Every concept is tied to something you build or practice immediately.
+                            Understanding theory is not enough &mdash; you need the muscle memory of doing it yourself.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW TO WORK WITH OUR INSTRUCTORS -->
+    <section class="join-sec">
+        <div class="container">
+            <div class="join-card" data-aos="fade-up">
+                <div class="slbl mb-3" style="margin:0 auto .8rem;"><i class="bi bi-send-fill"></i> Work With Us</div>
+                <h3>Ready to learn from an expert?<br><span>Here is how to get started.</span></h3>
+                <p>Joining a course is simple. Contact us, pick your course, and we will match you with the next
+                    available batch for that instructor. All classes are live and online &mdash; no travel required.</p>
+                <div class="join-steps">
+                    <div class="join-step">
+                        <div class="join-step-num">1</div>
+                        <span>Browse courses &amp; pick your subject</span>
+                    </div>
+                    <div class="join-step">
+                        <div class="join-step-num">2</div>
+                        <span>Contact us via WhatsApp or form</span>
+                    </div>
+                    <div class="join-step">
+                        <div class="join-step-num">3</div>
+                        <span>Confirm batch timing &amp; enroll</span>
+                    </div>
+                    <div class="join-step">
+                        <div class="join-step-num">4</div>
+                        <span>Join your first live session</span>
+                    </div>
+                </div>
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <a href="courses.html" class="bgp"><i class="bi bi-mortarboard-fill me-1"></i> Browse All
+                        Courses</a>
+                    <a href="starter.html"
+                        style="background:transparent;border:2px solid var(--pc);color:var(--pc);padding:.5rem 1.4rem;border-radius:50px;font-weight:600;text-decoration:none;display:inline-block;transition:all .3s;font-size:.9rem;"
+                        onmouseover="this.style.background='var(--pg)';this.style.color='white';this.style.borderColor='transparent'"
+                        onmouseout="this.style.background='transparent';this.style.color='var(--pc)';this.style.borderColor='var(--pc)'"><i
+                            class="bi bi-map me-1"></i> View Roadmaps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-sec">
+        <div class="container">
+            <div class="cta-inner" data-aos="zoom-in">
+                <h2>Ready to Learn from the Best?</h2>
+                <p>Small batches. Live sessions. Real instructors. Real results. Pick your course and enroll in the next
+                    available batch today.</p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="index.html#contact" class="bw"><i class="bi bi-send-fill me-2"></i>Contact Us to Enroll</a>
+                    <a href="about.html" class="bw-out"><i class="bi bi-info-circle-fill me-2"></i>About Incipient
+                        Study</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <span class="footer-logo-text">Incipient Study</span>
+                    <p class="footer-description">Empowering learners worldwide to master programming and languages through structured, certified, live online education. Affiliated with Ghana Company &amp; Innovative IT Solutions Agency.</p>
+                    <div class="footer-social-icons">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <h5 class="footer-col-title">Courses</h5>
+                    <ul class="footer-nav-list">
+                        <li><a href="courses.html">C Programming</a></li>
+                        <li><a href="courses.html">C++ Programming</a></li>
+                        <li><a href="courses.html">Python</a></li>
+                        <li><a href="courses.html">Full Stack (Laravel)</a></li>
+                        <li><a href="courses.html">Chinese (HSK 1&amp;2)</a></li>
+                        <li><a href="courses.html">Japanese (N5)</a></li>
+                        <li><a href="courses.html">English Grammar</a></li>
+                        <li><a href="courses.html">Public Speaking</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <h5 class="footer-col-title">Quick Links</h5>
+                    <ul class="footer-nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">All Courses</a></li>
+                        <li><a href="roadmaps.html">Roadmaps</a></li>
+                        <li><a href="learn-free.html">Free Lessons</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="instructors.html">Instructors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h5 class="footer-col-title">Work With Our Experts</h5>
+                    <div class="footer-enroll-box">
+                        <p>Small batches, live sessions, real instructors — pick your course and enroll in the next available batch.</p>
+                        <a href="contact.html" class="btn-footer-enroll"><i class="bi bi-award-fill me-1"></i> Enroll Today</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-divider">
+                <p>&copy; 2026 Incipient Study. All rights reserved. | Affiliated with Ghana Company &amp; Innovative IT Solutions Agency | Developed by <a href="https://webdevhumaira.github.io/Developers-Info/" target="_blank" rel="noopener">Developers</a></p>
+            </div>
+        </div>
+    </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    <script src="assets/js/shared.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/app.js"></script>
+    
+</body>
+
+</html>
